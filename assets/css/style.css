@@ -256,14 +256,15 @@ a { color: inherit; text-decoration: none; }
 
 
 /* YOUR NAME (HIGHLIGHT) */
-.dev-name {
-  color: #2e2a25;
-  font-weight: 600;
+.footer-bottom .dev-name {
+  color: #1c1a17 !important;   /* force override */
+  font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 3px;
   margin-left: 4px;
 }
 
-.dev-name:hover {
-  opacity: 0.7;
+.footer-bottom .dev-name:hover {
+  color: #1c1a17 !important;
+  opacity: 0.75;
 }
