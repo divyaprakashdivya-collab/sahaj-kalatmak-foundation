@@ -386,7 +386,8 @@ html {
 #people .content-card__thumb {
   width: 100%;
   aspect-ratio: 3 / 4;
-  background-size: cover;
+  background-size: contain;
+background-color: #f4f0e8;
   background-position: center;
   background-repeat: no-repeat;
   border-top-left-radius: var(--radius);
