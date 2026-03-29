@@ -369,3 +369,7 @@ html {
     opacity: 1 !important;
   }
 }
+/* People cards slightly tighter for cinematic feel */
+#people .content-card__thumb {
+  height: 260px;
+}
