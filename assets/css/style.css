@@ -426,3 +426,36 @@ background-color: #f4f0e8;
     grid-template-columns: 1fr;
   }
 }
+/* ===== PEOPLE PAGE FIX ===== */
+
+.people-profile {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.people-profile__image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: var(--shadow);
+}
+
+.people-profile__content h3 {
+  margin: 0;
+}
+
+.people-profile__content p {
+  margin-top: 12px;
+}
+
+/* mobile */
+@media (max-width: 760px) {
+  .people-profile {
+    grid-template-columns: 1fr;
+  }
+}
