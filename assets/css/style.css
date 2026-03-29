@@ -373,3 +373,31 @@ html {
 #people .content-card__thumb {
   height: 260px;
 }
+/* ===== PEOPLE ROW: 5 IN ONE LINE ===== */
+.people-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+#people .content-card__thumb {
+  height: 240px;
+}
+
+@media (max-width: 1100px) {
+  .people-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .people-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .people-row {
+    grid-template-columns: 1fr;
+  }
+}
