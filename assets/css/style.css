@@ -490,17 +490,17 @@ body.page-exit {
   backdrop-filter: blur(10px);
   padding: 24px;
   display: grid;
-  gap: 20px;
+  gap: 24px;
 }
 
 .people-card {
   display: grid;
-  grid-template-columns: 240px 1fr;
+  grid-template-columns: 200px 1fr;
   gap: 22px;
   align-items: start;
   padding: 20px;
   border-radius: 18px;
-  background: rgba(255,255,255,0.38);
+background: rgba(255,255,255,0.55);
   border: 1px solid rgba(110,31,31,0.08);
   scroll-margin-top: 110px;
 }
@@ -517,7 +517,7 @@ body.page-exit {
 .people-card__content h3 {
   margin: 0;
   color: #251d17;
-  font-size: 1.45rem;
+  font-size: 1.32rem;
 }
 
 .people-role {
