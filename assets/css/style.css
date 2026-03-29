@@ -257,14 +257,12 @@ a { color: inherit; text-decoration: none; }
 
 /* YOUR NAME (HIGHLIGHT) */
 .footer-bottom .dev-name {
-  color: #1c1a17 !important;   /* force override */
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  color: #2e2a25 !important;  
+  font-weight: 600;            
+  text-decoration: none;       
   margin-left: 4px;
 }
 
 .footer-bottom .dev-name:hover {
-  color: #1c1a17 !important;
-  opacity: 0.75;
+  opacity: 0.8;
 }
