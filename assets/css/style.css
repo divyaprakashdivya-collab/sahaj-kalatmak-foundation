@@ -372,13 +372,20 @@ html {
 /* ===== PEOPLE ROW: 5 IN ONE LINE ===== */
 .people-row {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 18px;
+  align-items: start;
 }
 
+/* People cards should behave like portrait cards */
+#people .content-card {
+  height: 100%;
+}
+
+/* Responsive portrait image for people */
 #people .content-card__thumb {
   width: 100%;
-  aspect-ratio: 3 / 4;   /* portrait ratio - perfect for people */
+  aspect-ratio: 3 / 4;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -386,15 +393,30 @@ html {
   border-top-right-radius: var(--radius);
 }
 
-@media (max-width: 1100px) {
+/* Slightly tighter body for people cards */
+#people .content-card__body {
+  padding: 18px 18px 20px;
+}
+
+#people .content-card__body h4 {
+  margin: 0;
+}
+
+#people .content-card__body p {
+  margin: 10px 0 0;
+  line-height: 1.65;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
   .people-row {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 760px) {
   .people-row {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
