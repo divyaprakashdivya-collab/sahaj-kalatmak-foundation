@@ -266,3 +266,106 @@ a { color: inherit; text-decoration: none; }
 .footer-bottom .dev-name:hover {
   opacity: 0.8;
 }
+/* ===== SAFE ANIMATION LAYER ===== */
+
+/* smooth global feel */
+html {
+  scroll-behavior: smooth;
+}
+
+.site-header {
+  transition: background 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.site-header.is-scrolled {
+  background: rgba(255, 250, 241, 0.94);
+  box-shadow: 0 10px 24px rgba(35, 26, 18, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+/* reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* stagger delay helpers */
+.delay-1 { transition-delay: 0.08s; }
+.delay-2 { transition-delay: 0.16s; }
+.delay-3 { transition-delay: 0.24s; }
+.delay-4 { transition-delay: 0.32s; }
+
+/* cards */
+.card,
+.feature-card,
+.content-card {
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.card:hover,
+.feature-card:hover,
+.content-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 38px rgba(31, 20, 10, 0.12);
+}
+
+/* buttons */
+.btn {
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease, color 0.22s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 22px rgba(31, 20, 10, 0.12);
+}
+
+/* image hover zoom */
+.content-card {
+  overflow: hidden;
+}
+
+.content-card__thumb {
+  transition: transform 0.5s ease;
+}
+
+.content-card:hover .content-card__thumb {
+  transform: scale(1.05);
+}
+
+/* nav underline smoother */
+.nav__menu a::after {
+  transition: width 0.28s ease;
+}
+
+/* footer social polish */
+.footer__social a {
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.footer__social a:hover {
+  transform: translateX(4px);
+}
+
+/* reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.is-visible,
+  .card,
+  .feature-card,
+  .content-card,
+  .content-card__thumb,
+  .btn,
+  .site-header,
+  .footer__social a {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
