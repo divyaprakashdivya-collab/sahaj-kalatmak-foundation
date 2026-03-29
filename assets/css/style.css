@@ -369,10 +369,6 @@ html {
     opacity: 1 !important;
   }
 }
-/* People cards slightly tighter for cinematic feel */
-#people .content-card__thumb {
-  height: 260px;
-}
 /* ===== PEOPLE ROW: 5 IN ONE LINE ===== */
 .people-row {
   display: grid;
