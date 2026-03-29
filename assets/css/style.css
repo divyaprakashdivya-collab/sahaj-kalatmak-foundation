@@ -459,3 +459,24 @@ background-color: #f4f0e8;
     grid-template-columns: 1fr;
   }
 }
+/* ===== PAGE TRANSITION ===== */
+body {
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+body.page-ready {
+  opacity: 1;
+}
+
+body.page-exit {
+  opacity: 0;
+}
+
+/* Respect reduced-motion users */
+@media (prefers-reduced-motion: reduce) {
+  body {
+    transition: none !important;
+    opacity: 1 !important;
+  }
+}
