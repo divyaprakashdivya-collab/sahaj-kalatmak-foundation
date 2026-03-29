@@ -1,0 +1,21 @@
+:root {
+  --bg: #f6f1e8;
+  --surface: rgba(255, 253, 248, 0.9);
+  --surface-strong: #fffdf8;
+  --text: #1f1a16;
+  --muted: #5a5044;
+  --maroon: #6e1f1f;
+  --gold: #c7a45a;
+  --gold-soft: #e7d7ad;
+  --charcoal: #2b2520;
+  --line: rgba(110, 31, 31, 0.12);
+  --shadow: 0 18px 50px rgba(28, 20, 12, 0.10);
+  --radius: 22px;
+  --max: 1180px;
+
+  /* brand accents from logo for controlled highlights */
+  --brand-blue: #1699d3;
+  --brand-pink: #e43b8f;
+  --brand-green: #5ab52c;
+  --brand-orange: #f28705;
+}
