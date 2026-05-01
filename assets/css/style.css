@@ -4,13 +4,17 @@
 
 * { box-sizing: border-box; }
 
+:root {
+  --anchor-offset: 150px;
+}
+
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 110px;
+  scroll-padding-top: var(--anchor-offset);
 }
 
 section[id] {
-  scroll-margin-top: 110px;
+  scroll-margin-top: var(--anchor-offset);
 }
 
 body {
@@ -20,18 +24,6 @@ body {
   background: #f6f1e8;
   opacity: 0;
   transition: opacity 0.35s ease;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(
-    180deg,
-    rgba(246,241,232,1) 0%,
-    rgba(246,241,232,1) 100%
-  );
 }
 
 body.page-ready { opacity: 1; }
@@ -706,7 +698,7 @@ a {
   border-radius: 18px;
   background: rgba(255,255,255,0.55);
   border: 1px solid rgba(110,31,31,0.08);
-  scroll-margin-top: 110px;
+  scroll-margin-top: var(--anchor-offset);
 }
 
 .people-card__image {
@@ -760,5 +752,21 @@ a {
 }
 
 .people-anchor {
-  scroll-margin-top: 110px;
+  scroll-margin-top: var(--anchor-offset);
+}
+
+/* =========================================================
+   Responsive anchor offset
+   ========================================================= */
+
+@media (max-width: 900px) {
+  :root {
+    --anchor-offset: 170px;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --anchor-offset: 190px;
+  }
 }
