@@ -465,9 +465,7 @@ a {
 
 /* =========================================================
    Contact Section
-   Includes:
-   - Contact list layout
-   - Clickable Email / Phone / WhatsApp links
+   Clean / Elegant / Premium
    ========================================================= */
 
 .contact-list {
@@ -491,24 +489,25 @@ a {
 .contact-link,
 .email-link {
   color: var(--maroon);
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: underline;
-  text-underline-offset: 3px;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
   word-break: break-word;
   cursor: pointer;
-  transition: opacity 0.2s ease, color 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 .contact-link:hover,
 .email-link:hover,
 .contact-link:focus,
 .email-link:focus {
-  opacity: 0.82;
+  opacity: 0.78;
 }
 
 .contact-link:focus,
 .email-link:focus {
-  outline: 2px solid rgba(110,31,31,0.18);
+  outline: 2px solid rgba(110,31,31,0.12);
   outline-offset: 2px;
   border-radius: 4px;
 }
