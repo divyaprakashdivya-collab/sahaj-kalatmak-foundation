@@ -217,7 +217,7 @@ a {
 }
 
 /* =========================================================
-   Shared cards / controls
+   Shared Cards / Buttons
    ========================================================= */
 
 .card {
@@ -270,7 +270,7 @@ a {
 }
 
 /* =========================================================
-   Panels / Section heading
+   Panels / Section Headings
    ========================================================= */
 
 .panel {
@@ -334,7 +334,7 @@ a {
 }
 
 /* =========================================================
-   Grid helpers
+   Grid Helpers
    ========================================================= */
 
 .grid-2 {
@@ -377,7 +377,7 @@ a {
 }
 
 /* =========================================================
-   Feature cards
+   Feature Cards
    ========================================================= */
 
 .feature-card {
@@ -412,7 +412,7 @@ a {
 }
 
 /* =========================================================
-   Content cards
+   Content Cards
    ========================================================= */
 
 .content-card {
@@ -444,7 +444,7 @@ a {
 }
 
 /* =========================================================
-   Quote band
+   Quote Band
    ========================================================= */
 
 .quote-band {
@@ -464,7 +464,7 @@ a {
 }
 
 /* =========================================================
-   Contact
+   Contact Section
    ========================================================= */
 
 .contact-list {
@@ -478,6 +478,31 @@ a {
   color: var(--muted);
   line-height: 1.8;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Communication links: email, phone, WhatsApp */
+.contact-link,
+.email-link {
+  color: var(--maroon);
+  font-weight: 600;
+  text-decoration: none;
+  word-break: break-word;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.contact-link:hover,
+.email-link:hover,
+.contact-link:focus,
+.email-link:focus {
+  text-decoration: underline;
+  opacity: 0.85;
+}
+
+.contact-link:focus,
+.email-link:focus {
+  outline: 2px solid rgba(110,31,31,0.18);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 /* =========================================================
@@ -583,7 +608,7 @@ a {
 }
 
 /* =========================================================
-   Safe animation layer
+   Animation Layer
    ========================================================= */
 
 .reveal {
@@ -632,7 +657,7 @@ a {
 }
 
 /* =========================================================
-   Homepage people strip
+   Homepage People Strip
    ========================================================= */
 
 .people-row {
@@ -671,7 +696,7 @@ a {
 }
 
 /* =========================================================
-   People page
+   People Page
    ========================================================= */
 
 .page-intro-card {
