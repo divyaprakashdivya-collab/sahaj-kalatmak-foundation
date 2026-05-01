@@ -11,16 +11,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const onScroll = () => {
     if (!header) return;
-
-    if (window.scrollY > 16) {
-      header.classList.add('is-scrolled');
-    } else {
-      header.classList.remove('is-scrolled');
-    }
+    header.classList.toggle('is-scrolled', window.scrollY > 16);
   };
 
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* ===== SMART ANCHOR SCROLL ===== */
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const targetId = link.getAttribute('href');
+      if (!targetId || targetId === '#') return;
+
+      const target = document.querySelector(targetId);
+      if (!target) return;
+
+      event.preventDefault();
+
+      const headerHeight = header ? header.offsetHeight : 0;
+      const extraGap = 28;
+      const targetPosition =
+        target.getBoundingClientRect().top + window.scrollY - headerHeight - extraGap;
+
+      window.scrollTo({
+        top: Math.max(targetPosition, 0),
+        behavior: 'smooth'
+      });
+
+      history.pushState(null, '', targetId);
+    });
+  });
 
   /* ===== SCROLL REVEAL ===== */
   const revealItems = document.querySelectorAll(
@@ -31,16 +51,12 @@ document.addEventListener('DOMContentLoaded', () => {
     el.classList.add('reveal');
 
     if (el.classList.contains('feature-card') || el.classList.contains('content-card')) {
-      const cycle = index % 4;
-      if (cycle === 0) el.classList.add('delay-1');
-      if (cycle === 1) el.classList.add('delay-2');
-      if (cycle === 2) el.classList.add('delay-3');
-      if (cycle === 3) el.classList.add('delay-4');
+      el.classList.add(`delay-${(index % 4) + 1}`);
     }
   });
 
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
         observer.unobserve(entry.target);
@@ -51,12 +67,12 @@ document.addEventListener('DOMContentLoaded', () => {
     rootMargin: '0px 0px -40px 0px'
   });
 
-  revealItems.forEach(el => observer.observe(el));
+  revealItems.forEach((el) => observer.observe(el));
 
   /* ===== PAGE TRANSITION FOR INTERNAL HTML PAGES ===== */
   const internalPageLinks = document.querySelectorAll('a[href$=".html"], a[href*=".html#"]');
 
-  internalPageLinks.forEach(link => {
+  internalPageLinks.forEach((link) => {
     link.addEventListener('click', (e) => {
       const href = link.getAttribute('href');
 
