@@ -17,9 +17,7 @@ body {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
   color: var(--text);
-  background:
-    linear-gradient(rgba(17, 14, 10, 0.42), rgba(17, 14, 10, 0.22)),
-    url('../images/hero/hero-main.jpg') center/cover fixed;
+  background: #f6f1e8;
   opacity: 0;
   transition: opacity 0.35s ease;
 }
@@ -29,7 +27,11 @@ body::before {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(180deg, rgba(246,241,232,0.10) 0%, rgba(246,241,232,0.93) 26%, rgba(246,241,232,1) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(246,241,232,1) 0%,
+    rgba(246,241,232,1) 100%
+  );
 }
 
 body.page-ready { opacity: 1; }
