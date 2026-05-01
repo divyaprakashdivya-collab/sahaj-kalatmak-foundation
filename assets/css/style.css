@@ -5,7 +5,7 @@
 * { box-sizing: border-box; }
 
 :root {
-  --anchor-offset: 150px;
+  --anchor-offset: 90px;
 }
 
 html {
@@ -753,20 +753,4 @@ a {
 
 .people-anchor {
   scroll-margin-top: var(--anchor-offset);
-}
-
-/* =========================================================
-   Responsive anchor offset
-   ========================================================= */
-
-@media (max-width: 900px) {
-  :root {
-    --anchor-offset: 170px;
-  }
-}
-
-@media (max-width: 640px) {
-  :root {
-    --anchor-offset: 190px;
-  }
 }
