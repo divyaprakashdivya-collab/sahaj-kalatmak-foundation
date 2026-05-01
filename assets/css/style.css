@@ -4,7 +4,14 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+
+section[id] {
+  scroll-margin-top: 110px;
+}
 
 body {
   margin: 0;
@@ -12,7 +19,7 @@ body {
   color: var(--text);
   background:
     linear-gradient(rgba(17, 14, 10, 0.42), rgba(17, 14, 10, 0.22)),
-    url('assets/images/hero/hero-main.jpg') center/cover fixed;
+    url('../images/hero/hero-main.jpg') center/cover fixed;
   opacity: 0;
   transition: opacity 0.35s ease;
 }
@@ -411,7 +418,7 @@ a {
 }
 
 /* =========================================================
-   Content cards (events, media, homepage people)
+   Content cards
    ========================================================= */
 
 .content-card {
@@ -647,8 +654,8 @@ a {
 
 #people .content-card__thumb {
   width: 100%;
-  aspect-ratio: 3 / 4;
-  background-size: contain;
+  aspect-ratio: 1 / 1;
+  background-size: cover;
   background-color: #f4f0e8;
   background-position: center;
   background-repeat: no-repeat;
@@ -702,7 +709,7 @@ a {
 
 .people-card__image {
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 1 / 1;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
