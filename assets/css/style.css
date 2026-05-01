@@ -483,13 +483,17 @@ a {
   line-height: 1.72;
 }
 
-/* Communication links: email, phone, WhatsApp */
+/* =========================================================
+   Communication Links
+   Softer / Balanced / Elegant
+   ========================================================= */
+
 .contact-link,
 .email-link {
   color: var(--maroon);
   font-family: inherit;
-  font-size: inherit;
-  font-weight: 500;
+  font-size: 0.94rem;     /* slightly smaller */
+  font-weight: 400;       /* lighter */
   text-decoration: underline;
   text-underline-offset: 2px;
   text-decoration-thickness: 1px;
@@ -507,11 +511,10 @@ a {
 
 .contact-link:focus,
 .email-link:focus {
-  outline: 2px solid rgba(110,31,31,0.12);
+  outline: 2px solid rgba(110,31,31,0.10);
   outline-offset: 2px;
   border-radius: 4px;
 }
-
 /* =========================================================
    Footer
    ========================================================= */
