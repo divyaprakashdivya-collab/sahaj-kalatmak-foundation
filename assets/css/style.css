@@ -93,9 +93,9 @@ a {
 }
 
 .brand__logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 88%;
+  height: 88%;
+  object-fit: contain;
 }
 
 .brand__text h1 {
@@ -150,14 +150,14 @@ a {
    ========================================================= */
 
 .hero {
-  padding: 72px 0 28px;
+  padding: 64px 0 24px;
 }
 
 .hero__grid {
   display: grid;
   grid-template-columns: 1.3fr 0.85fr;
   gap: 30px;
-  align-items: end;
+  align-items: center;
 }
 
 .hero__content {
@@ -197,9 +197,19 @@ a {
 
 .hero h2 {
   margin: 0;
-  font-size: clamp(2.2rem, 5vw, 4.4rem);
+  font-size: clamp(2.1rem, 4.4vw, 3.8rem);
   line-height: 1.02;
   color: #221c15;
+}
+
+.hero-kicker {
+  margin: 12px 0 0;
+  color: var(--maroon);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .hero__subtitle {
@@ -210,10 +220,10 @@ a {
 
 .hero__intro {
   margin: 22px 0 0;
-  max-width: 720px;
+  max-width: 690px;
   color: #42392e;
-  font-size: 1.05rem;
-  line-height: 1.85;
+  font-size: 1.03rem;
+  line-height: 1.78;
 }
 
 /* =========================================================
@@ -898,12 +908,12 @@ a {
     flex-direction: column;
   }
 
-  .hero__content {
-    padding: 42px 28px;
-  }
-
   .hero {
     padding: 46px 0 22px;
+  }
+
+  .hero__content {
+    padding: 42px 28px;
   }
 
   .people-card {
@@ -939,7 +949,12 @@ a {
   }
 
   .hero h2 {
-    font-size: clamp(2rem, 12vw, 3.15rem);
+    font-size: clamp(2rem, 11vw, 3rem);
+  }
+
+  .hero-kicker {
+    font-size: 0.82rem;
+    line-height: 1.5;
   }
 
   .hero__content {
@@ -947,8 +962,8 @@ a {
   }
 
   .hero__intro {
-    font-size: 0.98rem;
-    line-height: 1.75;
+    font-size: 0.96rem;
+    line-height: 1.72;
   }
 
   .trust-bar {
