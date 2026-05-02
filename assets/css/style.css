@@ -161,7 +161,7 @@ a {
 }
 
 .hero__content {
-  padding: 54px 44px;
+  padding: 46px 42px;
   overflow: hidden;
   position: relative;
 }
@@ -197,7 +197,7 @@ a {
 
 .hero h2 {
   margin: 0;
-  font-size: clamp(1.95rem, 3.9vw, 3.35rem);
+  font-size: clamp(1.95rem, 3.6vw, 3.15rem);
   line-height: 1.04;
   color: #221c15;
 }
