@@ -1,17 +1,15 @@
 /* =========================================================
    Responsive Overrides
-   Keep this file light because main responsive logic
-   is already handled in style.css
+   Main responsive rules are handled inside style.css.
+   This file is intentionally light to avoid conflicts.
    ========================================================= */
 
-/* Medium desktop / tablet */
 @media (max-width: 1200px) {
   .people-row {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
-/* Tablet */
 @media (max-width: 900px) {
   .hero__grid,
   .grid-2,
@@ -45,7 +43,6 @@
   }
 }
 
-/* Mobile */
 @media (max-width: 680px) {
   .hero__content {
     padding: 34px 22px;
@@ -66,7 +63,6 @@
   }
 }
 
-/* Small mobile */
 @media (max-width: 420px) {
   .hero__content {
     padding: 30px 18px;
