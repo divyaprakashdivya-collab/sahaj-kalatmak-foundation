@@ -1,62 +1,30 @@
 /* =========================================================
-   Responsive overrides
+   Responsive Overrides
+   Keep this file light because main responsive logic
+   is already handled in style.css
    ========================================================= */
 
+/* Medium desktop / tablet */
 @media (max-width: 1200px) {
   .people-row {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 1080px) {
+/* Tablet */
+@media (max-width: 900px) {
   .hero__grid,
   .grid-2,
   .grid-3,
   .grid-4,
-  .footer__grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .hero__grid > :first-child,
-  .grid-2 > :first-child,
-  .quote-band,
-  .footer__grid > :first-child {
-    grid-column: 1 / -1;
-  }
-}
-
-@media (max-width: 760px) {
-  .nav,
-  .section__head {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav__menu {
-    justify-content: flex-start;
-    gap: 12px 16px;
-  }
-
-  .hero__content {
-    padding: 36px 24px;
-  }
-
-  .hero__grid,
-  .grid-2,
-  .grid-3,
-  .grid-4,
-  .footer__grid {
+  .footer__grid,
+  .impact-strip {
     grid-template-columns: 1fr;
   }
 
-  .about-card,
-  .side-card,
-  .panel,
-  .feature-card,
-  .content-card__body,
-  .footer__grid {
-    padding-left: 20px;
-    padding-right: 20px;
+  .section__head {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .people-row {
@@ -77,8 +45,34 @@
   }
 }
 
-@media (max-width: 520px) {
+/* Mobile */
+@media (max-width: 680px) {
+  .hero__content {
+    padding: 34px 22px;
+  }
+
+  .about-card,
+  .side-card,
+  .panel,
+  .feature-card,
+  .content-card__body,
+  .footer__grid {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .people-row {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 420px) {
+  .hero__content {
+    padding: 30px 18px;
+  }
+
+  .section {
+    padding: 28px 0;
   }
 }
