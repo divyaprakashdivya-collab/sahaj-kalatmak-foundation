@@ -6,20 +6,25 @@
   <title>Sahaj Prerna Samman 2026 | Sahaj Kalatmak Foundation</title>
   <meta name="description" content="Sahaj Prerna Samman 2026 – celebrating the legacy of Lokmata Ahilyabai Holkar and honouring inspiring women contributors." />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
     :root{
       --ivory:#faf6ee;
       --cream:#fff9f0;
+      --paper:#fffdf8;
       --maroon:#6e1f35;
       --deep:#4f1426;
+      --wine:#3d0d1d;
       --gold:#c9a227;
+      --soft-gold:#f2ddb0;
       --wgold:#b98222;
       --brown:#3a2a1f;
       --muted:#756456;
-      --border:rgba(201,162,39,.28);
-      --shadow:0 18px 45px rgba(79,20,38,.14);
+      --border:rgba(201,162,39,.30);
+      --shadow:0 24px 70px rgba(79,20,38,.16);
+      --soft-shadow:0 12px 34px rgba(79,20,38,.09);
     }
 
     *{box-sizing:border-box}
@@ -28,12 +33,28 @@
     body{
       margin:0;
       font-family:Georgia,"Times New Roman",serif;
-      background:
-        radial-gradient(circle at top left,rgba(201,162,39,.18),transparent 32%),
-        radial-gradient(circle at bottom right,rgba(110,31,53,.1),transparent 34%),
-        var(--ivory);
       color:var(--brown);
       line-height:1.65;
+      background:
+        radial-gradient(circle at 8% 6%,rgba(201,162,39,.25),transparent 28%),
+        radial-gradient(circle at 94% 10%,rgba(110,31,53,.16),transparent 28%),
+        radial-gradient(circle at 50% 100%,rgba(201,162,39,.14),transparent 34%),
+        linear-gradient(180deg,#fffaf2 0%,#faf2e4 48%,#fff8ec 100%);
+      overflow-x:hidden;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:-1;
+      opacity:.55;
+      background-image:
+        linear-gradient(rgba(110,31,53,.035) 1px, transparent 1px),
+        linear-gradient(90deg,rgba(110,31,53,.03) 1px, transparent 1px);
+      background-size:42px 42px;
+      mask-image:linear-gradient(to bottom, transparent 0%, #000 18%, #000 82%, transparent 100%);
     }
 
     a{color:inherit}
@@ -43,9 +64,10 @@
       position:sticky;
       top:0;
       z-index:50;
-      background:rgba(250,246,238,.94);
-      backdrop-filter:blur(12px);
-      border-bottom:1px solid var(--border);
+      background:rgba(250,246,238,.88);
+      backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(201,162,39,.25);
+      box-shadow:0 10px 30px rgba(79,20,38,.04);
     }
 
     .nav{
@@ -62,21 +84,22 @@
     .brand{
       display:flex;
       align-items:center;
-      gap:10px;
-      font-weight:700;
+      gap:11px;
+      font-weight:800;
       color:var(--maroon);
       font-size:15px;
       white-space:nowrap;
+      letter-spacing:.1px;
     }
 
     .brand-logo{
-      width:42px;
-      height:42px;
+      width:44px;
+      height:44px;
       object-fit:contain;
       border-radius:50%;
       background:#fff;
-      padding:3px;
-      box-shadow:0 4px 12px rgba(0,0,0,.08);
+      padding:4px;
+      box-shadow:0 8px 20px rgba(79,20,38,.10),0 0 0 1px rgba(201,162,39,.28);
     }
 
     .nav-toggle{display:none}
@@ -86,11 +109,11 @@
       width:42px;
       height:42px;
       border:1px solid rgba(110,31,53,.22);
-      border-radius:12px;
+      border-radius:14px;
       align-items:center;
       justify-content:center;
       cursor:pointer;
-      background:rgba(255,255,255,.45);
+      background:rgba(255,255,255,.58);
     }
 
     .hamburger span,
@@ -118,11 +141,7 @@
       color:var(--muted);
     }
 
-    .nav-links a{
-      text-decoration:none;
-      transition:.2s;
-    }
-
+    .nav-links a{text-decoration:none;transition:.2s;font-weight:600}
     .nav-links a:hover{color:var(--maroon)}
 
     .btn{
@@ -130,88 +149,141 @@
       align-items:center;
       justify-content:center;
       gap:8px;
-      padding:12px 20px;
+      padding:12px 21px;
       border-radius:999px;
       background:linear-gradient(135deg,var(--maroon),var(--deep));
       color:#fff!important;
       text-decoration:none;
       font-family:Arial,sans-serif;
-      font-weight:700;
+      font-weight:800;
       font-size:14px;
-      box-shadow:0 12px 28px rgba(110,31,53,.24);
+      box-shadow:0 14px 30px rgba(110,31,53,.25);
       border:1px solid rgba(255,255,255,.18);
-      transition:.2s;
+      transition:.25s ease;
     }
 
-    .btn:hover{
-      transform:translateY(-2px);
-      box-shadow:0 16px 34px rgba(110,31,53,.3);
-    }
+    .btn:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(110,31,53,.32)}
 
     .btn.secondary{
-      background:transparent;
+      background:rgba(255,255,255,.52);
       color:var(--maroon)!important;
       box-shadow:none;
       border:1px solid rgba(110,31,53,.32);
     }
 
     .hero{
-      padding:38px 0 18px;
+      position:relative;
+      padding:44px 0 26px;
       text-align:center;
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      width:480px;
+      height:480px;
+      right:-190px;
+      top:-180px;
+      background:radial-gradient(circle,rgba(201,162,39,.24),transparent 68%);
+      filter:blur(18px);
+      pointer-events:none;
+      z-index:-1;
     }
 
     .eyebrow{
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      padding:7px 14px;
+      gap:8px;
+      padding:8px 16px;
       border-radius:999px;
-      background:rgba(201,162,39,.16);
+      background:rgba(201,162,39,.14);
       color:var(--maroon);
       font-family:Arial,sans-serif;
       font-size:12px;
-      font-weight:800;
-      letter-spacing:1px;
+      font-weight:900;
+      letter-spacing:1.1px;
       text-transform:uppercase;
       margin-bottom:18px;
+      border:1px solid rgba(201,162,39,.28);
     }
 
+    .eyebrow::before,.eyebrow::after{content:"✦";color:var(--wgold);font-size:12px}
+
     .hero h1{
-      margin:0 auto 10px;
+      margin:0 auto 12px;
       color:var(--maroon);
-      font-size:clamp(34px,5vw,62px);
-      line-height:1.08;
-      max-width:920px;
-      letter-spacing:-.8px;
+      font-size:clamp(36px,5.6vw,68px);
+      line-height:1.04;
+      max-width:930px;
+      letter-spacing:-1.2px;
+      text-shadow:0 1px 0 #fff;
     }
 
     .hero p{
-      margin:0 auto 22px;
+      margin:0 auto 24px;
       max-width:780px;
       color:var(--muted);
-      font-size:clamp(16px,2.3vw,19px);
+      font-size:clamp(16px,2.3vw,20px);
     }
 
+    .event-pills{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:10px;
+      margin:0 auto 24px;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:9px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,.60);
+      border:1px solid rgba(201,162,39,.28);
+      color:var(--deep);
+      font-family:Arial,sans-serif;
+      font-size:13px;
+      font-weight:800;
+      box-shadow:0 8px 24px rgba(79,20,38,.05);
+    }
+
+    .pill i{color:var(--wgold)}
+
     .poster-wrap{
-      max-width:780px;
+      max-width:800px;
       margin:0 auto;
-      background:var(--cream);
-      border:1px solid rgba(201,162,39,.38);
-      border-radius:28px;
+      position:relative;
+      background:linear-gradient(180deg,#fffdf8,#fff4df);
+      border:1px solid rgba(201,162,39,.42);
+      border-radius:32px;
       padding:14px;
-      box-shadow:var(--shadow);
+      box-shadow:var(--shadow),inset 0 1px 0 rgba(255,255,255,.85);
+      overflow:hidden;
+    }
+
+    .poster-wrap::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(135deg,rgba(255,255,255,.20),transparent 42%,rgba(201,162,39,.10));
+      pointer-events:none;
+      z-index:1;
     }
 
     .poster-wrap img{
       display:block;
       width:100%;
       height:auto;
-      border-radius:18px;
+      border-radius:22px;
       background:#f1e8d8;
+      position:relative;
     }
 
     .hero-actions{
-      margin-top:22px;
+      margin-top:24px;
       display:flex;
       justify-content:center;
       gap:12px;
@@ -219,110 +291,113 @@
     }
 
     .quick-note{
-      margin:14px auto 0;
+      margin:15px auto 0;
       color:var(--maroon);
       font-family:Arial,sans-serif;
       font-size:14px;
-      font-weight:700;
+      font-weight:800;
     }
 
-    section{padding:58px 0 0}
+    section{padding:64px 0 0}
 
-    .section-head{
-      text-align:center;
-      margin-bottom:28px;
-    }
+    .section-head{text-align:center;margin-bottom:30px}
 
     .kicker{
       color:var(--wgold);
       font-family:Arial,sans-serif;
       font-size:12px;
-      font-weight:800;
-      letter-spacing:1.2px;
+      font-weight:900;
+      letter-spacing:1.3px;
       text-transform:uppercase;
       margin-bottom:8px;
     }
 
     h2{
-      margin:0 auto 10px;
+      margin:0 auto 11px;
       color:var(--maroon);
-      font-size:clamp(27px,4vw,44px);
-      line-height:1.15;
-      max-width:860px;
+      font-size:clamp(28px,4vw,46px);
+      line-height:1.12;
+      max-width:880px;
+      letter-spacing:-.7px;
     }
 
-    .section-head p{
-      margin:0 auto;
-      max-width:800px;
-      color:var(--muted);
-      font-size:17px;
+    .section-head p{margin:0 auto;max-width:810px;color:var(--muted);font-size:18px;line-height:1.75}
+
+    .ornament-divider{
+      text-align:center;
+      margin:46px auto 0;
+      color:rgba(201,162,39,.78);
+      letter-spacing:12px;
+      font-size:20px;
+      user-select:none;
     }
 
-    .grid-2{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:20px;
-    }
-
-    .grid-3{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:18px;
-    }
-
-    .grid-5{
-      display:grid;
-      grid-template-columns:repeat(5,1fr);
-      gap:14px;
-    }
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .grid-5{display:grid;grid-template-columns:repeat(5,1fr);gap:15px}
 
     .card{
-      background:rgba(255,249,240,.92);
-      border:1px solid var(--border);
-      border-radius:24px;
-      padding:24px;
-      box-shadow:0 10px 28px rgba(79,20,38,.07);
+      background:linear-gradient(180deg,rgba(255,255,255,.92),rgba(255,249,240,.88));
+      border:1px solid rgba(201,162,39,.24);
+      border-radius:26px;
+      padding:26px;
+      box-shadow:var(--soft-shadow);
+      backdrop-filter:blur(12px);
     }
 
-    .card p{
-      margin-top:0;
-      color:var(--muted);
+    .card p{margin-top:0;color:var(--muted)}
+
+    .about-card{
+      position:relative;
+      overflow:hidden;
+      min-height:220px;
     }
 
-    h3{
-      margin:0 0 8px;
-      color:var(--maroon);
-      font-size:18px;
-      line-height:1.25;
+    .about-card::after{
+      content:"";
+      position:absolute;
+      width:150px;
+      height:150px;
+      right:-55px;
+      bottom:-55px;
+      background:radial-gradient(circle,rgba(201,162,39,.22),transparent 72%);
+      pointer-events:none;
     }
 
-    .small{
-      color:var(--muted);
-      font-size:14.5px;
-      margin:0;
-    }
+    h3{margin:0 0 8px;color:var(--maroon);font-size:19px;line-height:1.25}
+    .small{color:var(--muted);font-size:14.5px;margin:0}
 
     .person-card{
       text-align:center;
       position:relative;
       overflow:hidden;
       border-top:4px solid var(--gold);
-      transition:.25s;
+      transition:.30s ease;
+    }
+
+    .person-card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(135deg,rgba(201,162,39,.11),transparent 42%);
+      pointer-events:none;
     }
 
     .person-card:hover{
-      transform:translateY(-6px);
-      box-shadow:0 18px 42px rgba(79,20,38,.12);
+      transform:translateY(-10px) scale(1.015);
+      box-shadow:0 24px 55px rgba(79,20,38,.16);
     }
 
     .photo-frame{
-      width:118px;
-      height:118px;
-      margin:0 auto 16px;
+      width:130px;
+      height:130px;
+      margin:0 auto 18px;
       border-radius:50%;
       padding:5px;
-      background:linear-gradient(135deg,var(--gold),#f4e3bc,var(--maroon));
-      box-shadow:0 12px 26px rgba(79,20,38,.13);
+      background:linear-gradient(135deg,#f8e7b0,#c9a227,#6e1f35);
+      box-shadow:0 14px 30px rgba(79,20,38,.18),0 0 0 4px rgba(255,255,255,.70);
+      position:relative;
+      z-index:1;
     }
 
     .photo-placeholder{
@@ -334,341 +409,191 @@
       justify-content:center;
       background:linear-gradient(135deg,#fff9ec,#f1dfba);
       color:var(--maroon);
-      font-size:38px;
+      font-size:40px;
       border:3px solid #fff;
       overflow:hidden;
     }
 
-    .photo-placeholder img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-    }
+    .photo-placeholder img{width:100%;height:100%;object-fit:cover;display:block}
 
     .role-chip{
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      margin-top:8px;
-      padding:5px 10px;
+      margin-top:10px;
+      padding:5px 11px;
       border-radius:999px;
       background:rgba(201,162,39,.14);
       color:var(--deep);
       font-family:Arial,sans-serif;
-      font-weight:700;
+      font-weight:800;
       font-size:11px;
       letter-spacing:.4px;
       text-transform:uppercase;
+      position:relative;
+      z-index:1;
     }
 
+    .speakers-section{padding-top:72px}
+
     .speakers-band{
-      background:linear-gradient(135deg,rgba(110,31,53,.96),rgba(79,20,38,.98));
-      border:1px solid rgba(201,162,39,.45);
-      border-radius:32px;
-      padding:32px 22px;
+      background:linear-gradient(135deg,rgba(110,31,53,.98),rgba(61,13,29,.98));
+      border:1px solid rgba(201,162,39,.48);
+      border-radius:36px;
+      padding:38px 24px 34px;
       box-shadow:var(--shadow);
       position:relative;
       overflow:hidden;
     }
 
-    .speakers-band:before{
+    .speakers-band::before{
       content:"";
       position:absolute;
-      inset:-30%;
+      inset:-35%;
       background:
-        radial-gradient(circle at 30% 20%,rgba(201,162,39,.18),transparent 35%),
-        radial-gradient(circle at 80% 60%,rgba(255,255,255,.09),transparent 30%);
+        radial-gradient(circle at 22% 18%,rgba(201,162,39,.22),transparent 33%),
+        radial-gradient(circle at 82% 58%,rgba(255,255,255,.09),transparent 30%);
       pointer-events:none;
     }
 
-    .speakers-band .section-head{
-      position:relative;
-      margin-bottom:24px;
+    .speakers-band::after{
+      content:"";
+      position:absolute;
+      inset:16px;
+      border:1px solid rgba(201,162,39,.22);
+      border-radius:28px;
+      pointer-events:none;
     }
 
-    .speakers-band .kicker,
-    .speakers-band h2{
-      color:#fff;
-    }
-
-    .speakers-band .section-head p{
-      color:#f4e6d0;
-    }
+    .speakers-band .section-head{position:relative;margin-bottom:26px;z-index:1}
+    .speakers-band .kicker,.speakers-band h2{color:#fff}
+    .speakers-band .section-head p{color:#f4e6d0}
 
     .speaker-layout{
       position:relative;
+      z-index:1;
       display:grid;
-      grid-template-columns:1fr 1.1fr 1fr;
-      gap:18px;
+      grid-template-columns:1fr 1.12fr 1fr;
+      gap:20px;
       align-items:stretch;
     }
 
-    .speaker-card{
-      background:rgba(255,249,240,.98);
-    }
+    .speaker-card{background:rgba(255,249,240,.98)}
 
     .moderator-card{
-      border:2px solid rgba(201,162,39,.75);
+      border:2px solid rgba(201,162,39,.78);
       background:linear-gradient(180deg,#fffaf0,#f6e6c7);
+      transform:scale(1.035);
+      z-index:2;
+      box-shadow:0 22px 52px rgba(201,162,39,.20),0 12px 35px rgba(79,20,38,.17);
     }
 
     .moderator-badge{
       position:absolute;
       top:14px;
       right:14px;
-      background:var(--maroon);
+      background:linear-gradient(135deg,var(--maroon),var(--deep));
       color:#fff;
       border-radius:999px;
-      padding:5px 10px;
+      padding:6px 11px;
       font-family:Arial,sans-serif;
       font-size:11px;
-      font-weight:800;
+      font-weight:900;
       letter-spacing:.6px;
       text-transform:uppercase;
+      box-shadow:0 10px 20px rgba(79,20,38,.18);
     }
 
-    .awardee-card{
-      padding:22px 16px;
-    }
+    .awardee-card{padding:23px 15px}
+    .awardee-card .photo-frame{width:108px;height:108px}
+    .awardee-card .photo-placeholder{font-size:32px}
+    .awardee-card h3{font-size:16.5px}
+    .awardee-card .small{font-size:13.5px;line-height:1.45}
 
-    .awardee-card .photo-frame{
-      width:104px;
-      height:104px;
-    }
+    .timeline{position:relative;max-width:940px;margin:0 auto}
+    .timeline:before{content:"";position:absolute;top:0;bottom:0;left:18px;width:2px;background:linear-gradient(to bottom,transparent,rgba(201,162,39,.55),transparent)}
+    .timeline-item{position:relative;padding-left:55px;margin-bottom:18px}
+    .timeline-dot{position:absolute;left:7px;top:20px;width:24px;height:24px;border-radius:50%;background:var(--maroon);border:4px solid #f7ead4;box-shadow:0 0 0 1px rgba(201,162,39,.55)}
+    .timeline .card{padding:20px 22px;border-radius:20px}
+    .time{font-family:Arial,sans-serif;color:var(--wgold);font-weight:900;font-size:12px;letter-spacing:.9px;text-transform:uppercase;margin-bottom:4px}
 
-    .awardee-card .photo-placeholder{
-      font-size:32px;
-    }
-
-    .awardee-card h3{
-      font-size:16.5px;
-    }
-
-    .awardee-card .small{
-      font-size:13.5px;
-      line-height:1.45;
-    }
-
-    .timeline{
-      position:relative;
-      max-width:900px;
-      margin:0 auto;
-    }
-
-    .timeline:before{
-      content:"";
-      position:absolute;
-      top:0;
-      bottom:0;
-      left:18px;
-      width:2px;
-      background:rgba(201,162,39,.35);
-    }
-
-    .timeline-item{
-      position:relative;
-      padding-left:52px;
-      margin-bottom:16px;
-    }
-
-    .timeline-dot{
-      position:absolute;
-      left:8px;
-      top:20px;
-      width:22px;
-      height:22px;
-      border-radius:50%;
-      background:var(--maroon);
-      border:4px solid #f7ead4;
-      box-shadow:0 0 0 1px rgba(201,162,39,.45);
-    }
-
-    .timeline .card{
-      padding:18px 20px;
-      border-radius:18px;
-    }
-
-    .time{
-      font-family:Arial,sans-serif;
-      color:var(--wgold);
-      font-weight:800;
-      font-size:12px;
-      letter-spacing:.8px;
-      text-transform:uppercase;
-      margin-bottom:4px;
-    }
-
-    .info-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:20px;
-      align-items:stretch;
-    }
-
-    .note-list{
-      margin:0;
-      padding-left:20px;
-      color:var(--muted);
-    }
-
-    .note-list li{
-      margin-bottom:8px;
-    }
-
-    .map-box{
-      min-height:330px;
-      border-radius:24px;
-      overflow:hidden;
-      border:1px solid var(--border);
-      background:#efe4d5;
-      box-shadow:0 10px 28px rgba(79,20,38,.07);
-    }
-
-    .map-box iframe{
-      width:100%;
-      height:100%;
-      min-height:330px;
-      border:0;
-      display:block;
-    }
+    .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}
+    .note-list{margin:0;padding-left:20px;color:var(--muted)}
+    .note-list li{margin-bottom:9px}
+    .map-box{min-height:340px;border-radius:26px;overflow:hidden;border:1px solid var(--border);background:#efe4d5;box-shadow:var(--soft-shadow)}
+    .map-box iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
 
     .cta{
-      margin-top:58px;
-      padding:42px 22px;
-      border-radius:30px;
+      margin-top:64px;
+      padding:48px 24px;
+      border-radius:34px;
       text-align:center;
-      background:linear-gradient(135deg,rgba(110,31,53,.96),rgba(79,20,38,.98));
+      background:
+        radial-gradient(circle at 20% 20%,rgba(201,162,39,.20),transparent 32%),
+        linear-gradient(135deg,rgba(110,31,53,.98),rgba(61,13,29,.98));
       color:#fff;
       border:1px solid rgba(201,162,39,.55);
       box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
     }
 
-    .cta h2{
-      color:#fff;
-    }
-
-    .cta p{
-      color:#f7e9d5;
-      max-width:720px;
-      margin:0 auto 22px;
-    }
-
-    .cta .btn{
-      background:#fff;
-      color:var(--maroon)!important;
-    }
+    .cta::after{content:"✦";position:absolute;right:34px;bottom:18px;color:rgba(201,162,39,.28);font-size:78px;line-height:1}
+    .cta h2{color:#fff}
+    .cta p{color:#f7e9d5;max-width:720px;margin:0 auto 24px}
+    .cta .btn{background:#fff;color:var(--maroon)!important}
 
     footer{
-      margin-top:58px;
-      padding:28px 18px;
+      margin-top:74px;
+      padding:42px 18px;
       text-align:center;
-      color:var(--muted);
+      color:#f4e6d0;
       font-family:Arial,sans-serif;
       font-size:13px;
-      border-top:1px solid var(--border);
+      background:linear-gradient(135deg,rgba(110,31,53,.97),rgba(79,20,38,.98));
+      border-top:1px solid rgba(201,162,39,.35);
     }
 
-    @media(max-width:980px){
-      .grid-5{grid-template-columns:repeat(2,1fr)}
+    @media(max-width:1060px){
+      .grid-5{grid-template-columns:repeat(3,1fr)}
       .speaker-layout{grid-template-columns:1fr}
-      .poster-wrap{max-width:700px}
+      .moderator-card{transform:none}
+      .poster-wrap{max-width:740px}
     }
 
     @media(max-width:900px){
-      .grid-2,
-      .grid-3,
-      .info-grid{
-        grid-template-columns:1fr;
-      }
+      .grid-2,.grid-3,.info-grid{grid-template-columns:1fr}
+      .grid-5{grid-template-columns:repeat(2,1fr)}
     }
 
     @media(max-width:720px){
       .nav{padding:10px 14px}
-
-      .brand{
-        font-size:13px;
-        max-width:250px;
-        white-space:normal;
-        line-height:1.2;
-      }
-
-      .brand-logo{
-        width:38px;
-        height:38px;
-      }
-
+      .brand{font-size:13px;max-width:250px;white-space:normal;line-height:1.2}
+      .brand-logo{width:38px;height:38px}
       .hamburger{display:flex}
-
-      .nav-links{
-        position:absolute;
-        top:64px;
-        left:14px;
-        right:14px;
-        display:none;
-        flex-direction:column;
-        align-items:stretch;
-        gap:0;
-        background:var(--cream);
-        border:1px solid rgba(201,162,39,.35);
-        border-radius:18px;
-        box-shadow:var(--shadow);
-        overflow:hidden;
-      }
-
-      .nav-links a{
-        padding:14px 16px;
-        border-bottom:1px solid rgba(201,162,39,.18);
-        color:var(--brown);
-      }
-
+      .nav-links{position:absolute;top:64px;left:14px;right:14px;display:none;flex-direction:column;align-items:stretch;gap:0;background:var(--cream);border:1px solid rgba(201,162,39,.35);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+      .nav-links a{padding:14px 16px;border-bottom:1px solid rgba(201,162,39,.18);color:var(--brown)}
       .nav-links a:last-child{border-bottom:0}
-
-      .nav-links .btn{
-        margin:12px;
-        width:calc(100% - 24px);
-      }
-
+      .nav-links .btn{margin:12px;width:calc(100% - 24px)}
       .nav-toggle:checked~.nav-links{display:flex}
-
       .nav-toggle:checked+.hamburger span{background:transparent}
-
-      .nav-toggle:checked+.hamburger span:before{
-        top:0;
-        transform:rotate(45deg);
-      }
-
-      .nav-toggle:checked+.hamburger span:after{
-        top:0;
-        transform:rotate(-45deg);
-      }
-
-      .hero{padding-top:26px}
-      .hero h1{font-size:32px}
-
-      .poster-wrap{
-        padding:8px;
-        border-radius:20px;
-      }
-
-      .poster-wrap img{border-radius:14px}
-
+      .nav-toggle:checked+.hamburger span:before{top:0;transform:rotate(45deg)}
+      .nav-toggle:checked+.hamburger span:after{top:0;transform:rotate(-45deg)}
+      .hero{padding-top:28px}
+      .hero h1{font-size:34px}
+      .event-pills{align-items:stretch;flex-direction:column}
+      .pill{justify-content:center}
+      .poster-wrap{padding:8px;border-radius:22px}
+      .poster-wrap img{border-radius:16px}
       .hero-actions .btn{width:100%}
-
-      section{padding-top:44px}
-
-      .card{
-        padding:20px;
-        border-radius:20px;
-      }
-
+      section{padding-top:48px}
+      .card{padding:21px;border-radius:22px}
       .grid-5{grid-template-columns:1fr}
-
+      .speakers-band{padding:30px 16px;border-radius:26px}
       .timeline:before{left:14px}
-
       .timeline-item{padding-left:42px}
-
-      .timeline-dot{left:4px}
+      .timeline-dot{left:3px}
+      .ornament-divider{margin-top:34px}
     }
   </style>
 </head>
@@ -702,6 +627,12 @@
       <h1>Sahaj Prerna Samman 2026</h1>
       <p>An evening of inspiration, legacy and recognition dedicated to the timeless values of Lokmata Ahilyabai Holkar.</p>
 
+      <div class="event-pills">
+        <span class="pill"><i class="fa-solid fa-calendar-days"></i>30 May 2026, Saturday</span>
+        <span class="pill"><i class="fa-solid fa-clock"></i>5:00 PM to 7:00 PM</span>
+        <span class="pill"><i class="fa-solid fa-location-dot"></i>NSE Auditorium, BKC Mumbai</span>
+      </div>
+
       <div class="poster-wrap">
         <img src="../assets/images/logo/formPoster1.png" alt="Sahaj Prerna Samman 2026 Poster" />
       </div>
@@ -714,6 +645,8 @@
       <div class="quick-note">Free Entry • Limited Seating • Government ID Required</div>
     </section>
 
+    <div class="ornament-divider">✦ ✦ ✦</div>
+
     <section id="about" class="container">
       <div class="section-head">
         <div class="kicker">About the Event</div>
@@ -722,12 +655,12 @@
       </div>
 
       <div class="grid-2">
-        <div class="card">
+        <div class="card about-card">
           <p>Sahaj Kalatmak Foundation is a cultural and social organization committed to meaningful and inspiring work in the fields of art, literature, theatre, women empowerment and public awareness.</p>
           <p>Through Sahaj Prerna Samman, the Foundation seeks to acknowledge value-driven journeys that reflect compassion, dignity, leadership, creativity and social responsibility.</p>
         </div>
 
-        <div class="card">
+        <div class="card about-card">
           <p>The event is dedicated to the inspiring life values of Lokmata Ahilyabai Holkar — service, justice, cultural preservation, inclusive leadership and public welfare.</p>
           <p>Her timeless legacy continues to guide and inspire individuals and institutions working towards a more compassionate and value-based society.</p>
         </div>
@@ -743,33 +676,21 @@
 
       <div class="grid-3">
         <div class="card person-card guest-card">
-          <div class="photo-frame">
-            <div class="photo-placeholder">
-              <i class="fa-solid fa-user-tie"></i>
-            </div>
-          </div>
+          <div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-user-tie"></i></div></div>
           <h3>Smt. Aruna Raje</h3>
           <p class="small">Veteran Filmmaker</p>
           <span class="role-chip">Esteemed Guest</span>
         </div>
 
         <div class="card person-card guest-card">
-          <div class="photo-frame">
-            <div class="photo-placeholder">
-              <i class="fa-solid fa-clapperboard"></i>
-            </div>
-          </div>
+          <div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-clapperboard"></i></div></div>
           <h3>Shri Rajpal Yadav</h3>
           <p class="small">Renowned Actor</p>
           <span class="role-chip">Esteemed Guest</span>
         </div>
 
         <div class="card person-card guest-card">
-          <div class="photo-frame">
-            <div class="photo-placeholder">
-              <i class="fa-solid fa-users-line"></i>
-            </div>
-          </div>
+          <div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-users-line"></i></div></div>
           <h3>Smt. Seema Saroj</h3>
           <p class="small">Chairperson, FICCI FLO Mumbai</p>
           <span class="role-chip">Esteemed Guest</span>
@@ -777,7 +698,7 @@
       </div>
     </section>
 
-    <section id="speakers" class="container">
+    <section id="speakers" class="container speakers-section">
       <div class="speakers-band">
         <div class="section-head">
           <div class="kicker">Distinguished Speakers</div>
@@ -787,11 +708,7 @@
 
         <div class="speaker-layout">
           <div class="card person-card speaker-card">
-            <div class="photo-frame">
-              <div class="photo-placeholder">
-                <i class="fa-solid fa-microphone-lines"></i>
-              </div>
-            </div>
+            <div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-microphone-lines"></i></div></div>
             <h3>Prof. Deepa Singh</h3>
             <p class="small">Department of Communication & Journalism, University of Mumbai</p>
             <span class="role-chip">Speaker</span>
@@ -799,22 +716,14 @@
 
           <div class="card person-card moderator-card">
             <span class="moderator-badge">Moderator</span>
-            <div class="photo-frame">
-              <div class="photo-placeholder">
-                <i class="fa-solid fa-comments"></i>
-              </div>
-            </div>
+            <div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-comments"></i></div></div>
             <h3>Runa Ashish</h3>
             <p class="small">Journalist</p>
-            <span class="role-chip">Anchor/Moderator</span>
+            <span class="role-chip">Anchor / Moderator</span>
           </div>
 
           <div class="card person-card speaker-card">
-            <div class="photo-frame">
-              <div class="photo-placeholder">
-                <i class="fa-solid fa-landmark"></i>
-              </div>
-            </div>
+            <div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-landmark"></i></div></div>
             <h3>Shri Raj Shekhar Joshi</h3>
             <p class="small">Former Vice Chairman, Setu Aayog (State Planning Commission), Uttarakhand</p>
             <span class="role-chip">Speaker</span>
@@ -831,55 +740,11 @@
       </div>
 
       <div class="grid-5">
-        <div class="card person-card awardee-card">
-          <div class="photo-frame">
-            <div class="photo-placeholder">
-              <i class="fa-solid fa-scale-balanced"></i>
-            </div>
-          </div>
-          <h3>Mrs. Swati Chauhan</h3>
-          <p class="small">Judiciary & Social Service</p>
-        </div>
-
-        <div class="card person-card awardee-card">
-          <div class="photo-frame">
-            <div class="photo-placeholder">
-              <i class="fa-solid fa-staff-snake"></i>
-            </div>
-          </div>
-          <h3>Dr. Sujata Bapat</h3>
-          <p class="small">Healthcare, Women Empowerment & Community Wellness</p>
-        </div>
-
-        <div class="card person-card awardee-card">
-          <div class="photo-frame">
-            <div class="photo-placeholder">
-              <i class="fa-solid fa-hands-praying"></i>
-            </div>
-          </div>
-          <h3>Dr. Nivedita Shreyansh</h3>
-          <p class="small">Spiritual & Youth Value Leadership</p>
-        </div>
-
-        <div class="card person-card awardee-card">
-          <div class="photo-frame">
-            <div class="photo-placeholder">
-              <i class="fa-solid fa-masks-theater"></i>
-            </div>
-          </div>
-          <h3>Mrs. Varsha Karle</h3>
-          <p class="small">Arts & Cultural Curation</p>
-        </div>
-
-        <div class="card person-card awardee-card">
-          <div class="photo-frame">
-            <div class="photo-placeholder">
-              <i class="fa-solid fa-people-group"></i>
-            </div>
-          </div>
-          <h3>Ms. Alina Alam</h3>
-          <p class="small">Social Inclusion & Human Dignity</p>
-        </div>
+        <div class="card person-card awardee-card"><div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-scale-balanced"></i></div></div><h3>Mrs. Swati Chauhan</h3><p class="small">Judiciary & Social Service</p></div>
+        <div class="card person-card awardee-card"><div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-staff-snake"></i></div></div><h3>Dr. Sujata Bapat</h3><p class="small">Healthcare, Women Empowerment & Community Wellness</p></div>
+        <div class="card person-card awardee-card"><div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-hands-praying"></i></div></div><h3>Dr. Nivedita Shreyansh</h3><p class="small">Spiritual & Youth Value Leadership</p></div>
+        <div class="card person-card awardee-card"><div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-masks-theater"></i></div></div><h3>Mrs. Varsha Karle</h3><p class="small">Arts & Cultural Curation</p></div>
+        <div class="card person-card awardee-card"><div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-people-group"></i></div></div><h3>Ms. Alina Alam</h3><p class="small">Social Inclusion & Human Dignity</p></div>
       </div>
     </section>
 
@@ -891,50 +756,11 @@
       </div>
 
       <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="card">
-            <div class="time">5:00 PM onwards</div>
-            <h3>Opening & Cultural Invocation</h3>
-            <p class="small">Shiv Stuti, welcome address, ceremonial lamp lighting and introduction to Sahaj Kalatmak Foundation and Sahaj Prerna Samman.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="card">
-            <div class="time">Theme Based Discussion</div>
-            <h3>Expert Discussion Session</h3>
-            <p class="small">A moderated discussion with invited speakers on values, leadership, communication, culture and social contribution.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="card">
-            <div class="time">Award Segment</div>
-            <h3>Sahaj Prerna Samman 2026</h3>
-            <p class="small">Presentation of awards to honourees across judiciary, healthcare, spiritual leadership, arts and social inclusion.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="card">
-            <div class="time">Guest Addresses</div>
-            <h3>Words of Inspiration</h3>
-            <p class="small">Addresses by distinguished guests and dignitaries, followed by a cultural presentation.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="card">
-            <div class="time">Closing</div>
-            <h3>Vote of Thanks & Vande Mataram</h3>
-            <p class="small">Formal closing with gratitude and national spirit.</p>
-          </div>
-        </div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="card"><div class="time">5:00 PM onwards</div><h3>Opening & Cultural Invocation</h3><p class="small">Shiv Stuti, welcome address, ceremonial lamp lighting and introduction to Sahaj Kalatmak Foundation and Sahaj Prerna Samman.</p></div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="card"><div class="time">Theme Based Discussion</div><h3>Expert Discussion Session</h3><p class="small">A moderated discussion with invited speakers on values, leadership, communication, culture and social contribution.</p></div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="card"><div class="time">Award Segment</div><h3>Sahaj Prerna Samman 2026</h3><p class="small">Presentation of awards to honourees across judiciary, healthcare, spiritual leadership, arts and social inclusion.</p></div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="card"><div class="time">Guest Addresses</div><h3>Words of Inspiration</h3><p class="small">Addresses by distinguished guests and dignitaries, followed by a cultural presentation.</p></div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="card"><div class="time">Closing</div><h3>Vote of Thanks & Vande Mataram</h3><p class="small">Formal closing with gratitude and national spirit.</p></div></div>
       </div>
     </section>
 
