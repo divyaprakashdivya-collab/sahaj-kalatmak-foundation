@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sahaj Prerna Samman 2026 | Sahaj Kalatmak Foundation</title>
+  <meta name="description" content="Sahaj Prerna Samman 2026 – an inspiring evening celebrating the timeless legacy of Lokmata Ahilyabai Holkar and honouring remarkable women making meaningful contributions to society." />
+
+  <style>
+    :root {
+      --ivory: #faf6ee;
+      --cream: #fff9f0;
+      --maroon: #6e1f35;
+      --deep-maroon: #4f1426;
+      --gold: #c9a227;
+      --warm-gold: #b98222;
+      --brown: #3a2a1f;
+      --muted: #7a6858;
+      --card: rgba(255, 249, 240, 0.92);
+      --shadow: 0 18px 45px rgba(79, 20, 38, 0.16);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, 'Times New Roman', serif;
+      background:
+        radial-gradient(circle at top left, rgba(201, 162, 39, 0.16), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(110, 31, 53, 0.12), transparent 34%),
+        var(--ivory);
+      color: var(--brown);
+      line-height: 1.65;
+    }
+
+    a { color: inherit; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(250, 246, 238, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201, 162, 39, 0.25);
+    }
+
+    .nav {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      color: var(--maroon);
+      letter-spacing: 0.2px;
+      font-size: 15px;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--maroon), var(--gold));
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 16px;
+      box-shadow: 0 8px 20px rgba(110, 31, 53, 0.22);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover { color: var(--maroon); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--maroon), var(--deep-maroon));
+      color: #fff;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      box-shadow: 0 12px 28px rgba(110, 31, 53, 0.24);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 36px rgba(110, 31, 53, 0.28);
+    }
+
+    .btn.secondary {
+      background: transparent;
+      color: var(--maroon);
+      border: 1px solid rgba(110, 31, 53, 0.35);
+      box-shadow: none;
+    }
+
+    .hero {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 44px 20px 28px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+      gap: 34px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(201, 162, 39, 0.16);
+      color: var(--maroon);
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.9px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 18px 0 12px;
+      color: var(--maroon);
+      font-size: clamp(38px, 7vw, 76px);
+      line-height: 0.98;
+      letter-spacing: -1.8px;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(20px, 3vw, 31px);
+      line-height: 1.2;
+      color: var(--warm-gold);
+      margin: 0 0 16px;
+      font-weight: 700;
+    }
+
+    .hero-copy {
+      max-width: 650px;
+      font-size: 18px;
+      color: #4d3b30;
+      margin: 0 0 24px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-top: 18px;
+    }
+
+    .poster-card {
+      background: var(--cream);
+      border: 1px solid rgba(201, 162, 39, 0.35);
+      border-radius: 28px;
+      padding: 14px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .poster-card::before {
+      content: '';
+      position: absolute;
+      inset: -80px auto auto -80px;
+      width: 180px;
+      height: 180px;
+      background: rgba(201, 162, 39, 0.2);
+      border-radius: 50%;
+    }
+
+    .poster-card img {
+      display: block;
+      width: 100%;
+      border-radius: 20px;
+      background: #f3eadc;
+      position: relative;
+      z-index: 1;
+    }
+
+    .details-strip {
+      max-width: 1160px;
+      margin: 18px auto 0;
+      padding: 0 20px;
+    }
+
+    .details-panel {
+      background: linear-gradient(135deg, var(--maroon), var(--deep-maroon));
+      color: white;
+      border-radius: 26px;
+      padding: 22px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      border: 1px solid rgba(201, 162, 39, 0.55);
+      box-shadow: var(--shadow);
+    }
+
+    .detail-item {
+      padding: 12px 14px;
+      border-right: 1px solid rgba(201, 162, 39, 0.35);
+    }
+
+    .detail-item:last-child { border-right: 0; }
+
+    .detail-label {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #f3d982;
+      margin-bottom: 4px;
+    }
+
+    .detail-value {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    section {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 64px 20px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .section-title .kicker {
+      color: var(--warm-gold);
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 8px 0 12px;
+      color: var(--maroon);
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.08;
+    }
+
+    .section-title p {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(201, 162, 39, 0.28);
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(79, 20, 38, 0.08);
+      padding: 28px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .about-grid p { margin-top: 0; }
+
+    .values {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .value-card {
+      text-align: center;
+      padding: 22px 18px;
+    }
+
+    .icon {
+      width: 54px;
+      height: 54px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(201, 162, 39, 0.17);
+      color: var(--maroon);
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
+
+    .value-card h3,
+    .award-card h3,
+    .honouree-card h3 {
+      color: var(--maroon);
+      margin: 0 0 8px;
+      line-height: 1.25;
+      font-size: 18px;
+    }
+
+    .value-card p,
+    .award-card p,
+    .honouree-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .award-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+    }
+
+    .award-card {
+      padding: 20px 16px;
+      min-height: 150px;
+    }
+
+    .honouree-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    .honouree-card {
+      padding: 20px 16px;
+      border-top: 4px solid var(--gold);
+    }
+
+    .partner-strip {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .partner {
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 14px 10px;
+    }
+
+    .partner-label {
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 1px;
+      color: var(--muted);
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .partner img {
+      max-width: 118px;
+      max-height: 52px;
+      object-fit: contain;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .note-list {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    .note-list li { margin-bottom: 8px; }
+
+    .map-box {
+      min-height: 320px;
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid rgba(201, 162, 39, 0.34);
+      background: #efe4d5;
+    }
+
+    .map-box iframe {
+      width: 100%;
+      height: 320px;
+      border: 0;
+      display: block;
+    }
+
+    .cta {
+      margin: 64px auto 0;
+      max-width: 980px;
+      text-align: center;
+      padding: 42px 24px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, rgba(110, 31, 53, 0.96), rgba(79, 20, 38, 0.98));
+      color: white;
+      border: 1px solid rgba(201, 162, 39, 0.55);
+      box-shadow: var(--shadow);
+    }
+
+    .cta h2 { color: white; margin-top: 0; }
+    .cta p { color: #f7e9d5; max-width: 680px; margin: 0 auto 22px; }
+    .cta .btn { background: #fff; color: var(--maroon); }
+
+    footer {
+      margin-top: 64px;
+      padding: 28px 20px;
+      text-align: center;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      border-top: 1px solid rgba(201, 162, 39, 0.25);
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .about-grid,
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .values,
+      .award-grid,
+      .honouree-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .partner-strip {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .partner-strip .partner:last-child {
+        grid-column: span 2;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .nav { align-items: flex-start; }
+      .nav-links { display: none; }
+      .hero { padding-top: 28px; }
+      .poster-card { border-radius: 20px; padding: 10px; }
+      .poster-card img { border-radius: 14px; }
+      .details-panel { grid-template-columns: 1fr; padding: 16px; border-radius: 22px; }
+      .detail-item { border-right: 0; border-bottom: 1px solid rgba(201, 162, 39, 0.3); }
+      .detail-item:last-child { border-bottom: 0; }
+      section { padding-top: 46px; }
+      .values,
+      .award-grid,
+      .honouree-grid,
+      .partner-strip { grid-template-columns: 1fr; }
+      .partner-strip .partner:last-child { grid-column: auto; }
+      .card { padding: 22px; border-radius: 20px; }
+      .hero-actions .btn { width: 100%; }
+      .brand { font-size: 13px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <nav class="nav">
+      <div class="brand">
+        <span class="brand-mark">स</span>
+        <span>Sahaj Kalatmak Foundation</span>
+      </div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#honourees">Honourees</a>
+        <a href="#details">Details</a>
+        <a href="#partners">Partners</a>
+        <a class="btn" href="https://www.sahajkalatmakfoundation.org/rsvp">RSVP</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="eyebrow">Sahaj Prerna Samman 2026</span>
+        <h1>Honouring Inspiring Women</h1>
+        <p class="hero-subtitle">Inspired by the timeless legacy of Lokmata Ahilyabai Holkar</p>
+        <p class="hero-copy">
+          An inspiring evening celebrating legacy, leadership, service and meaningful social contribution through culture, recognition and collective inspiration.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="https://www.sahajkalatmakfoundation.org/rsvp">Confirm Your Presence</a>
+          <a class="btn secondary" href="#details">View Event Details</a>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <!-- Replace the src below with your final poster image path, e.g. assets/images/sahaj-prerna-samman-2026-poster.png -->
+        <img src="assets/images/sahaj-prerna-samman-2026-poster.png" alt="Sahaj Prerna Samman 2026 Poster" />
+      </div>
+    </section>
+
+    <div class="details-strip" id="details">
+      <div class="details-panel">
+        <div class="detail-item">
+          <div class="detail-label">Date</div>
+          <div class="detail-value">Saturday, 30 May 2026</div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-label">Time</div>
+          <div class="detail-value">5:00 PM onwards</div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-label">Venue</div>
+          <div class="detail-value">NSE Auditorium, BKC, Mumbai</div>
+        </div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="section-title">
+        <div class="kicker">About the Event</div>
+        <h2>A celebration of legacy, leadership and service</h2>
+        <p>Sahaj Prerna Samman 2026 is a meaningful initiative by Sahaj Kalatmak Foundation to recognise women whose work continues to inspire society.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="card">
+          <p>
+            Sahaj Kalatmak Foundation is a cultural and social organization committed to meaningful and inspiring work in the fields of art, literature, theatre, women empowerment and public awareness.
+          </p>
+          <p>
+            Through Sahaj Prerna Samman, the Foundation seeks to acknowledge value-driven journeys that reflect compassion, dignity, leadership, creativity and social responsibility.
+          </p>
+        </div>
+        <div class="card">
+          <p>
+            The event is dedicated to the inspiring life values of Lokmata Ahilyabai Holkar — service, justice, cultural preservation, inclusive leadership and public welfare.
+          </p>
+          <p>
+            Her timeless legacy continues to guide and inspire individuals and institutions working towards a more compassionate and value-based society.
+          </p>
+        </div>
+      </div>
+
+      <div class="values">
+        <div class="card value-card">
+          <div class="icon">दी</div>
+          <h3>Inspired By</h3>
+          <p>The life and values of Lokmata Ahilyabai Holkar.</p>
+        </div>
+        <div class="card value-card">
+          <div class="icon">⚖</div>
+          <h3>Celebrating</h3>
+          <p>Service, justice, leadership and cultural preservation.</p>
+        </div>
+        <div class="card value-card">
+          <div class="icon">✦</div>
+          <h3>Honouring</h3>
+          <p>Women achievers creating meaningful impact in society.</p>
+        </div>
+        <div class="card value-card">
+          <div class="icon">🏆</div>
+          <h3>Recognising</h3>
+          <p>Excellence, inspiration and purposeful social contribution.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="categories">
+      <div class="section-title">
+        <div class="kicker">Award Categories</div>
+        <h2>Sahaj Prerna Samman 2026</h2>
+      </div>
+      <div class="award-grid">
+        <div class="card award-card">
+          <h3>Judiciary & Social Service</h3>
+          <p>Recognising justice-oriented social contribution.</p>
+        </div>
+        <div class="card award-card">
+          <h3>Healthcare, Women Empowerment & Community Wellness</h3>
+          <p>Recognising health awareness, empowerment and wellbeing.</p>
+        </div>
+        <div class="card award-card">
+          <h3>Spiritual & Youth Value Leadership</h3>
+          <p>Recognising value-based guidance for younger generations.</p>
+        </div>
+        <div class="card award-card">
+          <h3>Arts & Cultural Curation</h3>
+          <p>Recognising contribution to arts and cultural expression.</p>
+        </div>
+        <div class="card award-card">
+          <h3>Social Inclusion & Human Dignity</h3>
+          <p>Recognising dignity, inclusion and empowerment.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="honourees">
+      <div class="section-title">
+        <div class="kicker">Honourees</div>
+        <h2>Women whose journeys inspire society</h2>
+      </div>
+      <div class="honouree-grid">
+        <div class="card honouree-card">
+          <h3>Mrs. Swati Chauhan</h3>
+          <p>Judiciary & Social Service</p>
+        </div>
+        <div class="card honouree-card">
+          <h3>Dr. Sujata Bapat</h3>
+          <p>Healthcare, Women Empowerment & Community Wellness</p>
+        </div>
+        <div class="card honouree-card">
+          <h3>Dr. Nivedita Shreyansh</h3>
+          <p>Spiritual & Youth Value Leadership</p>
+        </div>
+        <div class="card honouree-card">
+          <h3>Mrs. Varsha Karle</h3>
+          <p>Arts & Cultural Curation</p>
+        </div>
+        <div class="card honouree-card">
+          <h3>Ms. Eliana Alam</h3>
+          <p>Social Inclusion & Human Dignity</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="partners">
+      <div class="section-title">
+        <div class="kicker">Partners & Associations</div>
+        <h2>Together in celebration of values and inspiration</h2>
+      </div>
+      <div class="partner-strip">
+        <div class="card partner">
+          <div class="partner-label">Organised By</div>
+          <img src="assets/logos/logo_1.jpg" alt="Sahaj Kalatmak Foundation" />
+        </div>
+        <div class="card partner">
+          <div class="partner-label">Host Partner</div>
+          <img src="assets/logos/logo_2.svg" alt="National Stock Exchange" />
+        </div>
+        <div class="card partner">
+          <div class="partner-label">Cultural Association</div>
+          <img src="assets/logos/logo_3.jpeg" alt="Sanskar Bharati" />
+        </div>
+        <div class="card partner">
+          <div class="partner-label">Theater Association</div>
+          <img src="assets/logos/logo_4.jpeg" alt="Pant Drama Forum" />
+        </div>
+        <div class="card partner">
+          <div class="partner-label">Wellbeing Association</div>
+          <img src="assets/logos/logo_5.svg" alt="Heartfulness" />
+        </div>
+      </div>
+    </section>
+
+    <section id="info">
+      <div class="section-title">
+        <div class="kicker">Important Information</div>
+        <h2>For guests and attendees</h2>
+      </div>
+      <div class="info-grid">
+        <div class="card">
+          <ul class="note-list">
+            <li>Entry is free, with limited seating available.</li>
+            <li>Entry is subject to venue security protocols.</li>
+            <li>Please carry any one valid Government-issued photo ID for venue entry.</li>
+            <li>Guests are requested to plan their travel in advance, as parking in the BKC area may be subject to availability.</li>
+            <li>For event-related queries, please contact Divya Prakash, Program Manager: +91 97304 15945.</li>
+          </ul>
+        </div>
+        <div class="map-box">
+          <iframe
+            title="NSE Auditorium BKC Mumbai Map"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=National%20Stock%20Exchange%20BKC%20Mumbai&output=embed">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta">
+      <h2>Reserve Your Presence</h2>
+      <p>Be a part of an evening of inspiration, legacy and celebration. Kindly confirm your presence for event coordination.</p>
+      <a class="btn" href="https://www.sahajkalatmakfoundation.org/rsvp">RSVP – Confirm Your Presence</a>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 Sahaj Kalatmak Foundation. All rights reserved.
+  </footer>
+</body>
+</html>
