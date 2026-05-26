@@ -4,27 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sahaj Prerna Samman 2026 | Sahaj Kalatmak Foundation</title>
-  <meta name="description" content="Sahaj Prerna Samman 2026 – a premium cultural award ceremony celebrating the legacy of Lokmata Ahilyabai Holkar and honouring inspiring women contributors." />
-
+  <meta name="description" content="Official event information page for Sahaj Prerna Samman 2026 by Sahaj Kalatmak Foundation at NSE Auditorium, BKC Mumbai." />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
     :root{
-      --ivory:#fbf4e8;
-      --cream:#fffaf1;
-      --paper:#fffdf8;
+      --cream:#fff8ec;
+      --ivory:#fffdf8;
+      --gold:#c49a2c;
+      --gold-soft:#f1dfb4;
       --maroon:#741936;
-      --deep:#4a0f23;
-      --wine:#350a1a;
-      --gold:#c9a227;
-      --gold2:#e5c46f;
-      --bronze:#9a6721;
-      --brown:#39291f;
-      --muted:#75685f;
-      --line:rgba(201,162,39,.32);
-      --shadow:0 24px 70px rgba(74,15,35,.15);
-      --soft-shadow:0 14px 38px rgba(74,15,35,.09);
+      --maroon-dark:#471020;
+      --text:#30251f;
+      --muted:#6f6259;
+      --line:rgba(196,154,44,.34);
+      --shadow:0 18px 45px rgba(71,16,32,.12);
+      --radius:22px;
     }
 
     *{box-sizing:border-box}
@@ -32,61 +28,81 @@
     body{
       margin:0;
       font-family:Georgia,"Times New Roman",serif;
-      color:var(--brown);
-      line-height:1.65;
-      background:
-        radial-gradient(circle at 8% 4%,rgba(201,162,39,.20),transparent 25%),
-        radial-gradient(circle at 92% 8%,rgba(116,25,54,.12),transparent 28%),
-        linear-gradient(180deg,#fffaf1 0%,#fbf1df 45%,#fff8ed 100%);
-      overflow-x:hidden;
+      color:var(--text);
+      background:linear-gradient(180deg,#fffaf1 0%,#fff6e8 48%,#fffaf3 100%);
+      line-height:1.55;
     }
-    body::before{
-      content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.35;
-      background-image:linear-gradient(rgba(116,25,54,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(116,25,54,.02) 1px,transparent 1px);
-      background-size:44px 44px;
-    }
-    a{color:inherit}.container{max-width:1180px;margin:0 auto;padding:0 18px}
+    a{text-decoration:none;color:inherit}
+    .container{max-width:1120px;margin:0 auto;padding:0 20px}
 
-    .topbar{position:sticky;top:0;z-index:50;background:rgba(255,250,242,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(201,162,39,.24);box-shadow:0 8px 30px rgba(74,15,35,.05)}
-    .nav{max-width:1180px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative}
-    .brand{display:flex;align-items:center;gap:11px;font-weight:800;color:var(--maroon);font-size:15px;white-space:nowrap;letter-spacing:.1px}
-    .brand-logo{width:44px;height:44px;object-fit:contain;border-radius:50%;background:#fff;padding:4px;box-shadow:0 8px 20px rgba(74,15,35,.10),0 0 0 1px rgba(201,162,39,.30)}
-    .nav-toggle{display:none}.hamburger{display:none;width:42px;height:42px;border:1px solid rgba(116,25,54,.22);border-radius:14px;align-items:center;justify-content:center;cursor:pointer;background:rgba(255,255,255,.62)}
-    .hamburger span,.hamburger span:before,.hamburger span:after{content:"";display:block;width:20px;height:2px;border-radius:10px;background:var(--maroon);position:relative;transition:.2s}.hamburger span:before{position:absolute;top:-7px}.hamburger span:after{position:absolute;top:7px}
-    .nav-links{display:flex;align-items:center;gap:18px;font-family:Arial,sans-serif;font-size:13px;color:var(--muted)}
-    .nav-links a{text-decoration:none;transition:.2s;font-weight:700}.nav-links a:hover{color:var(--maroon)}
+    .topbar{position:sticky;top:0;z-index:50;background:rgba(255,250,242,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px;max-width:1120px;margin:0 auto;padding:10px 20px}
+    .brand{display:flex;align-items:center;gap:12px;color:var(--maroon);font-weight:800;font-size:16px;white-space:nowrap}
+    .brand-logo{width:46px;height:46px;border-radius:50%;object-fit:contain;background:#fff;padding:4px;box-shadow:0 0 0 1px var(--line)}
+    .nav-links{display:flex;align-items:center;gap:18px;font-family:Arial,sans-serif;font-size:13px;font-weight:700;color:var(--muted)}
+    .nav-links a:hover{color:var(--maroon)}
+    .nav-toggle,.hamburger{display:none}
 
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,var(--maroon),var(--deep));color:#fff!important;text-decoration:none;font-family:Arial,sans-serif;font-weight:900;font-size:14px;box-shadow:0 14px 30px rgba(116,25,54,.25);border:1px solid rgba(255,255,255,.18);transition:.25s ease}.btn:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(116,25,54,.32)}.btn.secondary{background:rgba(255,255,255,.62);color:var(--maroon)!important;box-shadow:none;border:1px solid rgba(116,25,54,.30)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,var(--maroon),var(--maroon-dark));color:#fff!important;font-family:Arial,sans-serif;font-size:14px;font-weight:900;border:1px solid rgba(255,255,255,.22);box-shadow:0 12px 28px rgba(116,25,54,.22);transition:.2s ease}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(116,25,54,.28)}
+    .btn.secondary{background:#fff;color:var(--maroon)!important;border:1px solid rgba(116,25,54,.24);box-shadow:none}
 
-    .hero{position:relative;padding:42px 0 52px;text-align:center}.hero::after{content:"";position:absolute;width:520px;height:520px;right:-210px;top:-190px;background:radial-gradient(circle,rgba(201,162,39,.22),transparent 68%);filter:blur(18px);pointer-events:none;z-index:-1}
-    .eyebrow{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:8px 16px;border-radius:999px;background:rgba(201,162,39,.14);color:var(--maroon);font-family:Arial,sans-serif;font-size:12px;font-weight:900;letter-spacing:1.15px;text-transform:uppercase;margin-bottom:18px;border:1px solid rgba(201,162,39,.28)}.eyebrow::before,.eyebrow::after{content:"✦";color:var(--bronze);font-size:12px}
-    .hero h1{margin:0 auto 12px;color:var(--maroon);font-size:clamp(38px,5.2vw,66px);line-height:1.04;max-width:930px;letter-spacing:-1.2px;text-shadow:0 1px 0 #fff}.hero p{margin:0 auto 24px;max-width:780px;color:var(--muted);font-size:clamp(16px,2.2vw,20px)}
-    .event-pills{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:0 auto 26px}.pill{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;background:rgba(255,255,255,.72);border:1px solid rgba(201,162,39,.30);color:var(--deep);font-family:Arial,sans-serif;font-size:13px;font-weight:850;box-shadow:0 8px 24px rgba(74,15,35,.05)}.pill i{color:var(--bronze)}
-    .poster-wrap{max-width:780px;margin:0 auto;position:relative;background:linear-gradient(180deg,#fffdf8,#fff4df);border:1px solid rgba(201,162,39,.42);border-radius:30px;padding:13px;box-shadow:var(--shadow),inset 0 1px 0 rgba(255,255,255,.85);overflow:hidden}.poster-wrap img{display:block;width:100%;height:auto;border-radius:20px;background:#f1e8d8}.hero-actions{margin-top:24px;display:flex;justify-content:center;gap:13px;flex-wrap:wrap}.quick-note{margin:16px auto 0;color:var(--maroon);font-family:Arial,sans-serif;font-size:14px;font-weight:850}
+    .hero{padding:34px 0 38px}
+    .hero-grid{display:grid;grid-template-columns:1fr 430px;gap:34px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;margin-bottom:12px;padding:7px 13px;border-radius:999px;background:rgba(196,154,44,.13);border:1px solid var(--line);color:var(--maroon);font-family:Arial,sans-serif;font-size:12px;font-weight:900;letter-spacing:.9px;text-transform:uppercase}
+    .eyebrow i{color:var(--gold)}
+    h1{margin:0 0 12px;color:var(--maroon);font-size:clamp(38px,5vw,66px);line-height:1.02;letter-spacing:-1px}
+    .hero-lead{margin:0 0 22px;max-width:640px;color:var(--muted);font-size:19px}
+    .event-summary{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:0 0 22px;max-width:660px}
+    .summary-item{display:flex;gap:11px;align-items:flex-start;padding:14px;background:var(--ivory);border:1px solid var(--line);border-radius:18px;box-shadow:0 8px 22px rgba(71,16,32,.06)}
+    .summary-item i{margin-top:3px;color:var(--gold);font-size:18px;width:20px;text-align:center}
+    .summary-item strong{display:block;color:var(--maroon);font-family:Arial,sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:.4px}
+    .summary-item span{display:block;color:var(--text);font-size:15px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+    .note-line{margin-top:14px;color:var(--maroon);font-family:Arial,sans-serif;font-size:14px;font-weight:800}
+    .poster-card{background:var(--ivory);border:1px solid var(--line);border-radius:28px;padding:12px;box-shadow:var(--shadow)}
+    .poster-card img{display:block;width:100%;height:auto;border-radius:18px;background:#f1e3cb}
 
-    section{padding:74px 0 0;scroll-margin-top:88px}.section-head{text-align:center;margin-bottom:30px}.kicker{color:var(--bronze);font-family:Arial,sans-serif;font-size:12px;font-weight:900;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:9px}h2{margin:0 auto 12px;color:var(--maroon);font-size:clamp(30px,3.6vw,46px);line-height:1.12;max-width:880px;letter-spacing:-.7px}.section-head p{margin:0 auto;max-width:790px;color:var(--muted);font-size:17px;line-height:1.72}
-    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.grid-5{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,.95),rgba(255,249,240,.91));border:1px solid rgba(201,162,39,.24);border-radius:26px;padding:26px;box-shadow:var(--soft-shadow);backdrop-filter:blur(12px)}.card p{margin-top:0;color:var(--muted)}h3{margin:0 0 8px;color:var(--maroon);font-size:19px;line-height:1.25}.small{color:var(--muted);font-size:14.5px;margin:0}
+    section{padding:46px 0;scroll-margin-top:86px}
+    .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:22px;border-bottom:1px solid var(--line);padding-bottom:14px}
+    .section-kicker{color:var(--gold);font-family:Arial,sans-serif;font-size:12px;font-weight:900;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:4px}
+    h2{margin:0;color:var(--maroon);font-size:clamp(28px,3vw,38px);line-height:1.15}
+    .section-head p{margin:0;color:var(--muted);max-width:430px;font-size:15.5px;text-align:right}
 
-    .story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.story-card{min-height:205px;text-align:left;position:relative;overflow:hidden}.story-icon{width:54px;height:54px;border-radius:16px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#fff4d7,#f4dfad);color:var(--maroon);font-size:24px;margin-bottom:14px;border:1px solid rgba(201,162,39,.36)}
+    .card{background:var(--ivory);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 10px 28px rgba(71,16,32,.07)}
+    .about-box{display:grid;grid-template-columns:1.15fr .85fr;gap:20px;align-items:stretch}
+    .about-main{padding:24px}.about-main p{margin:0 0 14px;color:var(--muted);font-size:16px}.about-main p:last-child{margin-bottom:0}
+    .brand-panel{padding:24px;background:linear-gradient(135deg,var(--maroon),var(--maroon-dark));color:#fff;border-color:rgba(196,154,44,.45)}
+    .brand-panel h3{margin:0 0 10px;color:#fff;font-size:24px}.brand-panel p{margin:0;color:#f7e8d4}.brand-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.brand-tags span{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.12);font-family:Arial,sans-serif;font-size:12px;font-weight:800;color:#fff}
 
-    .presence-panel{position:relative;padding:30px;border-radius:34px;border:1px solid rgba(201,162,39,.30);background:radial-gradient(circle at 18% 0%,rgba(201,162,39,.14),transparent 32%),linear-gradient(180deg,rgba(255,253,248,.70),rgba(255,247,232,.58));box-shadow:0 22px 60px rgba(74,15,35,.10)}
-    .person-card{text-align:center;position:relative;overflow:hidden;border-top:4px solid var(--gold);transition:.30s ease;min-height:255px;display:flex;flex-direction:column;justify-content:center}.person-card::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(201,162,39,.10),transparent 42%);pointer-events:none}.person-card:hover{transform:translateY(-7px);box-shadow:0 22px 52px rgba(74,15,35,.14)}
-    .photo-frame{width:116px;height:116px;margin:0 auto 17px;border-radius:50%;padding:5px;background:linear-gradient(135deg,#f8e7b0,#c9a227,#741936);box-shadow:0 12px 28px rgba(74,15,35,.15),0 0 0 4px rgba(255,255,255,.72);position:relative;z-index:1}.photo-placeholder{width:100%;height:100%;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#fff9ec,#f1dfba);color:var(--maroon);font-size:36px;border:3px solid #fff;overflow:hidden}.photo-placeholder img{width:100%;height:100%;object-fit:cover;display:block}.role-chip{display:inline-flex;align-items:center;justify-content:center;align-self:center;margin-top:12px;padding:6px 12px;border-radius:999px;background:rgba(201,162,39,.15);color:var(--deep);font-family:Arial,sans-serif;font-weight:850;font-size:11px;letter-spacing:.4px;text-transform:uppercase;position:relative;z-index:1}
+    .people-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .people-grid-5{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+    .person-card{padding:20px 14px;text-align:center;min-height:224px;display:flex;flex-direction:column;align-items:center;justify-content:center;border-top:4px solid var(--gold)}
+    .photo-frame{width:92px;height:92px;border-radius:50%;padding:5px;background:linear-gradient(135deg,var(--gold-soft),var(--gold),var(--maroon));margin-bottom:14px;box-shadow:0 8px 20px rgba(71,16,32,.12)}
+    .photo-placeholder{width:100%;height:100%;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#fff8e9,#f1dca8);border:3px solid #fff;color:var(--maroon);font-size:28px;overflow:hidden}
+    .photo-placeholder img{width:100%;height:100%;object-fit:cover;display:block}
+    .person-card h3{margin:0 0 6px;color:var(--maroon);font-size:18px;line-height:1.25}
+    .person-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.4}
+    .role-chip{margin-top:10px;padding:5px 10px;border-radius:999px;background:rgba(196,154,44,.15);font-family:Arial,sans-serif;font-size:11px;font-weight:900;color:var(--maroon);text-transform:uppercase;letter-spacing:.4px}
+    .awardee-card{min-height:210px}.awardee-card .photo-frame{width:80px;height:80px}.awardee-card h3{font-size:15.5px}.awardee-card p{font-size:13px}
 
-    .speakers-band{background:radial-gradient(circle at 16% 12%,rgba(201,162,39,.16),transparent 30%),linear-gradient(135deg,rgba(116,25,54,.98),rgba(53,10,26,.98));border:1px solid rgba(201,162,39,.48);border-radius:34px;padding:34px 24px 32px;box-shadow:var(--shadow);position:relative;overflow:hidden}.speakers-band::after{content:"";position:absolute;inset:14px;border:1px solid rgba(201,162,39,.18);border-radius:26px;pointer-events:none}.speakers-band .section-head{position:relative;margin-bottom:28px;z-index:1}.speakers-band .kicker,.speakers-band h2{color:#fff}.speakers-band .section-head p{color:#f4e6d0}.speaker-layout{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1.06fr 1fr;gap:20px;align-items:stretch}.speaker-card{background:rgba(255,249,240,.98)}.moderator-card{border:2px solid rgba(201,162,39,.78);background:linear-gradient(180deg,#fffaf0,#f6e6c7);box-shadow:0 18px 44px rgba(201,162,39,.16),0 10px 30px rgba(74,15,35,.14)}.moderator-badge{position:absolute;top:14px;right:14px;background:linear-gradient(135deg,var(--maroon),var(--deep));color:#fff;border-radius:999px;padding:6px 11px;font-family:Arial,sans-serif;font-size:11px;font-weight:900;letter-spacing:.6px;text-transform:uppercase;box-shadow:0 10px 20px rgba(74,15,35,.18)}
+    .speaker-wrap{background:linear-gradient(135deg,var(--maroon),var(--maroon-dark));border-radius:28px;padding:26px;border:1px solid rgba(196,154,44,.45);box-shadow:var(--shadow)}
+    .speaker-wrap .section-head{border-color:rgba(196,154,44,.32);margin-bottom:20px}.speaker-wrap h2,.speaker-wrap .section-kicker{color:#fff}.speaker-wrap .section-head p{color:#f7e8d4}.speaker-wrap .person-card{background:var(--ivory)}
+    .moderator-card{border:2px solid rgba(196,154,44,.75);position:relative;background:linear-gradient(180deg,#fffdf7,#fff1d0)!important}
+    .moderator-badge{position:absolute;top:12px;right:12px;padding:5px 9px;border-radius:999px;background:var(--maroon);color:#fff;font-family:Arial,sans-serif;font-size:10px;font-weight:900;text-transform:uppercase}
 
-    .awardee-card{padding:22px 14px;min-height:248px}.awardee-card .photo-frame{width:96px;height:96px}.awardee-card .photo-placeholder{font-size:29px}.awardee-card h3{font-size:16.2px}.awardee-card .small{font-size:13.3px;line-height:1.42}
+    .schedule-table{overflow:hidden;border-radius:var(--radius);border:1px solid var(--line);box-shadow:0 10px 28px rgba(71,16,32,.07)}
+    .schedule-row{display:grid;grid-template-columns:170px 1fr;background:var(--ivory);border-bottom:1px solid var(--line)}
+    .schedule-row:last-child{border-bottom:0}
+    .schedule-time{padding:18px 20px;background:#fff4dc;color:var(--maroon);font-family:Arial,sans-serif;font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:.5px}
+    .schedule-content{padding:18px 22px}.schedule-content h3{margin:0 0 4px;color:var(--maroon);font-size:18px}.schedule-content p{margin:0;color:var(--muted);font-size:14.5px}
 
-    .agenda-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.agenda-card{padding:20px 16px;text-align:center;border-radius:24px}.agenda-time{font-family:Arial,sans-serif;color:var(--bronze);font-weight:900;font-size:12px;text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px}.agenda-card i{font-size:24px;color:var(--maroon);margin-bottom:12px}.agenda-card h3{font-size:16px}
+    .info-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:20px;align-items:stretch}.info-card{padding:22px}.note-list{margin:0;padding-left:20px;color:var(--muted)}.note-list li{margin-bottom:8px}.map-box{min-height:320px;overflow:hidden}.map-box iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
+    .cta{margin-top:34px;padding:36px 24px;text-align:center;border-radius:28px;background:linear-gradient(135deg,var(--maroon),var(--maroon-dark));color:#fff;border:1px solid rgba(196,154,44,.45);box-shadow:var(--shadow)}.cta h2{color:#fff}.cta p{margin:0 auto 20px;max-width:660px;color:#f7e8d4}
+    footer{padding:32px 18px;text-align:center;background:var(--maroon-dark);color:#f7e8d4;font-family:Arial,sans-serif;font-size:13px;margin-top:20px}
 
-    .info-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:24px;align-items:stretch}.note-list{margin:0;padding-left:20px;color:var(--muted)}.note-list li{margin-bottom:9px}.map-box{min-height:330px;border-radius:26px;overflow:hidden;border:1px solid var(--line);background:#efe4d5;box-shadow:var(--soft-shadow)}.map-box iframe{width:100%;height:100%;min-height:330px;border:0;display:block}
-    .cta{margin-top:62px;padding:48px 24px;border-radius:34px;text-align:center;background:radial-gradient(circle at 20% 20%,rgba(201,162,39,.18),transparent 32%),linear-gradient(135deg,rgba(116,25,54,.98),rgba(53,10,26,.98));color:#fff;border:1px solid rgba(201,162,39,.55);box-shadow:var(--shadow);position:relative;overflow:hidden}.cta::after{content:"✦";position:absolute;right:34px;bottom:18px;color:rgba(201,162,39,.26);font-size:76px;line-height:1}.cta h2{color:#fff}.cta p{color:#f7e9d5;max-width:720px;margin:0 auto 24px}.cta .btn{background:#fff;color:var(--maroon)!important}
-    footer{margin-top:76px;padding:42px 18px;text-align:center;color:#f4e6d0;font-family:Arial,sans-serif;font-size:13px;background:linear-gradient(135deg,rgba(116,25,54,.97),rgba(74,15,35,.98));border-top:1px solid rgba(201,162,39,.35)}
-
-    @media(max-width:1060px){.grid-5,.agenda-grid{grid-template-columns:repeat(3,1fr)}.speaker-layout{grid-template-columns:1fr}.poster-wrap{max-width:740px}}
-    @media(max-width:900px){.grid-2,.grid-3,.story-grid,.info-grid{grid-template-columns:1fr}.grid-5,.agenda-grid{grid-template-columns:repeat(2,1fr)}.presence-panel{padding:22px}}
-    @media(max-width:720px){.nav{padding:10px 14px}.brand{font-size:13px;max-width:250px;white-space:normal;line-height:1.2}.brand-logo{width:38px;height:38px}.hamburger{display:flex}.nav-links{position:absolute;top:64px;left:14px;right:14px;display:none;flex-direction:column;align-items:stretch;gap:0;background:var(--cream);border:1px solid rgba(201,162,39,.35);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}.nav-links a{padding:14px 16px;border-bottom:1px solid rgba(201,162,39,.18);color:var(--brown)}.nav-links a:last-child{border-bottom:0}.nav-links .btn{margin:12px;width:calc(100% - 24px)}.nav-toggle:checked~.nav-links{display:flex}.nav-toggle:checked+.hamburger span{background:transparent}.nav-toggle:checked+.hamburger span:before{top:0;transform:rotate(45deg)}.nav-toggle:checked+.hamburger span:after{top:0;transform:rotate(-45deg)}.hero{padding-top:30px}.hero h1{font-size:34px}.event-pills{align-items:stretch;flex-direction:column}.pill{justify-content:center}.poster-wrap{padding:8px;border-radius:22px}.poster-wrap img{border-radius:16px}.hero-actions .btn{width:100%}section{padding-top:58px}.card{padding:22px;border-radius:22px}.grid-5,.agenda-grid{grid-template-columns:1fr}.speakers-band{padding:30px 16px;border-radius:28px}}
+    @media(max-width:1000px){.hero-grid,.about-box,.info-grid{grid-template-columns:1fr}.poster-card{max-width:720px}.people-grid-5{grid-template-columns:repeat(3,1fr)}.section-head{display:block}.section-head p{text-align:left;margin-top:8px}}
+    @media(max-width:760px){.nav{min-height:68px}.brand{font-size:13px;white-space:normal}.brand-logo{width:38px;height:38px}.hamburger{display:flex;width:42px;height:42px;border:1px solid var(--line);border-radius:12px;align-items:center;justify-content:center;background:#fff}.hamburger span,.hamburger span:before,.hamburger span:after{content:"";display:block;width:20px;height:2px;background:var(--maroon);position:relative}.hamburger span:before{position:absolute;top:-7px}.hamburger span:after{position:absolute;top:7px}.nav-links{display:none;position:absolute;top:68px;left:14px;right:14px;flex-direction:column;align-items:stretch;gap:0;background:#fffaf1;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}.nav-links a{padding:13px 16px;border-bottom:1px solid rgba(196,154,44,.18)}.nav-links .btn{margin:12px;width:calc(100% - 24px)}.nav-toggle:checked~.nav-links{display:flex}.hero{padding:28px 0 34px}h1{font-size:36px}.event-summary,.people-grid-3,.people-grid-5{grid-template-columns:1fr}.hero-actions .btn{width:100%}section{padding:40px 0}.speaker-wrap{padding:18px;border-radius:22px}.schedule-row{grid-template-columns:1fr}.schedule-time{padding:14px 18px}.poster-card{padding:8px;border-radius:22px}.poster-card img{border-radius:15px}}
   </style>
 </head>
 
@@ -96,82 +112,51 @@
       <div class="brand"><img src="../assets/images/logo/eventlogo.jpg" alt="Sahaj Kalatmak Foundation" class="brand-logo" /><span>Sahaj Kalatmak Foundation</span></div>
       <input class="nav-toggle" type="checkbox" id="menu-toggle" />
       <label class="hamburger" for="menu-toggle" aria-label="Open menu"><span></span></label>
-      <div class="nav-links"><a href="#about">About</a><a href="#guests">Guests</a><a href="#speakers">Speakers</a><a href="#honourees">Awardees</a><a href="#flow">Event Flow</a><a href="#info">Visitor Info</a><a class="btn" href="https://www.sahajkalatmakfoundation.org/rsvp">RSVP</a></div>
+      <div class="nav-links"><a href="#about">About</a><a href="#guests">Guests</a><a href="#speakers">Session</a><a href="#honourees">Awardees</a><a href="#schedule">Schedule</a><a href="#venue">Venue</a><a class="btn" href="https://www.sahajkalatmakfoundation.org/rsvp">RSVP</a></div>
     </nav>
   </header>
 
   <main>
     <section class="hero container">
-      <div class="eyebrow">Sahaj Kalatmak Foundation Presents</div>
-      <h1>Sahaj Prerna Samman 2026</h1>
-      <p>A premium cultural evening celebrating the legacy of Lokmata Ahilyabai Holkar and honouring women whose journeys inspire society.</p>
-      <div class="event-pills"><span class="pill"><i class="fa-solid fa-calendar-days"></i>30 May 2026, Saturday</span><span class="pill"><i class="fa-solid fa-clock"></i>5:00 PM to 7:00 PM</span><span class="pill"><i class="fa-solid fa-location-dot"></i>NSE Auditorium, BKC Mumbai</span></div>
-      <div class="poster-wrap"><img src="../assets/images/logo/formPoster1.png" alt="Sahaj Prerna Samman 2026 Poster" /></div>
-      <div class="hero-actions"><a class="btn" href="https://www.sahajkalatmakfoundation.org/rsvp">RSVP – Confirm Your Presence</a><a class="btn secondary" href="#info">Visitor Information</a></div>
-      <div class="quick-note">Free Entry • Limited Seating • Government ID Required</div>
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow"><i class="fa-solid fa-award"></i> Official Event Page</div>
+          <h1>Sahaj Prerna Samman 2026</h1>
+          <p class="hero-lead">A cultural award evening by Sahaj Kalatmak Foundation, inspired by the life and values of Lokmata Ahilyabai Holkar.</p>
+          <div class="event-summary">
+            <div class="summary-item"><i class="fa-solid fa-calendar-days"></i><div><strong>Date</strong><span>30 May 2026, Saturday</span></div></div>
+            <div class="summary-item"><i class="fa-solid fa-clock"></i><div><strong>Time</strong><span>5:00 PM to 7:00 PM</span></div></div>
+            <div class="summary-item"><i class="fa-solid fa-location-dot"></i><div><strong>Venue</strong><span>NSE Auditorium, BKC Mumbai</span></div></div>
+            <div class="summary-item"><i class="fa-solid fa-ticket"></i><div><strong>Entry</strong><span>Free Entry • Limited Seating</span></div></div>
+          </div>
+          <div class="hero-actions"><a class="btn" href="https://www.sahajkalatmakfoundation.org/rsvp">RSVP – Confirm Your Presence</a><a class="btn secondary" href="#venue">View Venue Details</a></div>
+          <div class="note-line">Government photo ID required for venue entry.</div>
+        </div>
+        <div class="poster-card"><img src="../assets/images/logo/formPoster1.png" alt="Sahaj Prerna Samman 2026 Poster" /></div>
+      </div>
     </section>
 
     <section id="about" class="container">
-      <div class="section-head"><div class="kicker">Why this evening matters</div><h2>A tribute to values, leadership and inspiring contribution</h2><p>This gathering brings together culture, dialogue and recognition in the spirit of Lokmata Ahilyabai Holkar’s timeless legacy.</p></div>
-      <div class="story-grid">
-        <div class="card story-card"><div class="story-icon"><i class="fa-solid fa-landmark-dome"></i></div><h3>Legacy</h3><p>Inspired by Lokmata Ahilyabai Holkar’s values of justice, service, dignity and public welfare.</p></div>
-        <div class="card story-card"><div class="story-icon"><i class="fa-solid fa-award"></i></div><h3>Recognition</h3><p>Honouring remarkable women whose work reflects courage, compassion and social responsibility.</p></div>
-        <div class="card story-card"><div class="story-icon"><i class="fa-solid fa-people-arrows"></i></div><h3>Dialogue</h3><p>An evening of meaningful conversation, cultural reflection and value-based inspiration.</p></div>
+      <div class="section-head"><div><div class="section-kicker">About</div><h2>About the event</h2></div><p>Short, clear and useful context for attendees.</p></div>
+      <div class="about-box">
+        <div class="card about-main"><p><strong>Sahaj Prerna Samman 2026</strong> recognises inspiring women contributors whose work reflects service, leadership, compassion and social responsibility.</p><p>The event is dedicated to the values of Lokmata Ahilyabai Holkar — justice, public welfare, cultural preservation and inclusive leadership.</p></div>
+        <div class="card brand-panel"><h3>Sahaj Kalatmak Foundation</h3><p>A cultural and social organisation working through art, literature, theatre, awareness and value-based public engagement.</p><div class="brand-tags"><span>Culture</span><span>Art</span><span>Social Impact</span><span>Women Leadership</span></div></div>
       </div>
     </section>
 
     <section id="guests" class="container">
-      <div class="section-head"><div class="kicker">Esteemed Guests</div><h2>Distinguished presence for an inspiring evening</h2><p>Respected personalities from cinema, culture, leadership and public life will grace the occasion.</p></div>
-      <div class="presence-panel"><div class="grid-3">
-        <div class="card person-card"><div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-user-tie"></i></div></div><h3>Smt. Aruna Raje</h3><p class="small">Veteran Filmmaker</p><span class="role-chip">Esteemed Guest</span></div>
-        <div class="card person-card"><div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-clapperboard"></i></div></div><h3>Shri Rajpal Yadav</h3><p class="small">Renowned Actor</p><span class="role-chip">Esteemed Guest</span></div>
-        <div class="card person-card"><div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-users-line"></i></div></div><h3>Smt. Seema Saroj</h3><p class="small">Chairperson, FICCI FLO Mumbai</p><span class="role-chip">Esteemed Guest</span></div>
-      </div></div>
+      <div class="section-head"><div><div class="section-kicker">Esteemed Guests</div><h2>Guests of the evening</h2></div><p>Respected personalities from cinema, leadership and public life.</p></div>
+      <div class="people-grid-3"><div class="card person-card"><div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-user-tie"></i></div></div><h3>Smt. Aruna Raje</h3><p>Veteran Filmmaker</p><span class="role-chip">Esteemed Guest</span></div><div class="card person-card"><div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-clapperboard"></i></div></div><h3>Shri Rajpal Yadav</h3><p>Renowned Actor</p><span class="role-chip">Esteemed Guest</span></div><div class="card person-card"><div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-users-line"></i></div></div><h3>Smt. Seema Saroj</h3><p>Chairperson, FICCI FLO Mumbai</p><span class="role-chip">Esteemed Guest</span></div></div>
     </section>
 
-    <section id="speakers" class="container">
-      <div class="speakers-band">
-        <div class="section-head"><div class="kicker">Distinguished Speakers</div><h2>A focused conversation with thoughtful moderation</h2><p>Communication, culture, leadership and social impact brought together in one meaningful session.</p></div>
-        <div class="speaker-layout">
-          <div class="card person-card speaker-card"><div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-microphone-lines"></i></div></div><h3>Prof. Deepa Singh</h3><p class="small">Department of Communication & Journalism, University of Mumbai</p><span class="role-chip">Speaker</span></div>
-          <div class="card person-card moderator-card"><span class="moderator-badge">Moderator</span><div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-comments"></i></div></div><h3>Runa Ashish</h3><p class="small">Journalist</p><span class="role-chip">Anchor / Moderator</span></div>
-          <div class="card person-card speaker-card"><div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-landmark"></i></div></div><h3>Shri Raj Shekhar Joshi</h3><p class="small">Former Vice Chairman, Setu Aayog (State Planning Commission), Uttarakhand</p><span class="role-chip">Speaker</span></div>
-        </div>
-      </div>
-    </section>
+    <section id="speakers" class="container"><div class="speaker-wrap"><div class="section-head"><div><div class="section-kicker">Discussion Session</div><h2>Distinguished speakers & moderator</h2></div><p>A focused session on values, culture, leadership and social contribution.</p></div><div class="people-grid-3"><div class="card person-card"><div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-microphone-lines"></i></div></div><h3>Prof. Deepa Singh</h3><p>Department of Communication & Journalism, University of Mumbai</p><span class="role-chip">Speaker</span></div><div class="card person-card moderator-card"><span class="moderator-badge">Moderator</span><div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-comments"></i></div></div><h3>Runa Ashish</h3><p>Journalist</p><span class="role-chip">Anchor / Moderator</span></div><div class="card person-card"><div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-landmark"></i></div></div><h3>Shri Raj Shekhar Joshi</h3><p>Former Vice Chairman, Setu Aayog (State Planning Commission), Uttarakhand</p><span class="role-chip">Speaker</span></div></div></div></section>
 
-    <section id="honourees" class="container">
-      <div class="section-head"><div class="kicker">Honourees / Awardees</div><h2>Women whose journeys inspire society</h2><p>Celebrating remarkable women across justice, healthcare, spirituality, culture and social inclusion.</p></div>
-      <div class="grid-5">
-        <div class="card person-card awardee-card"><div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-scale-balanced"></i></div></div><h3>Mrs. Swati Chauhan</h3><p class="small">Judiciary & Social Service</p></div>
-        <div class="card person-card awardee-card"><div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-staff-snake"></i></div></div><h3>Dr. Sujata Bapat</h3><p class="small">Healthcare, Women Empowerment & Community Wellness</p></div>
-        <div class="card person-card awardee-card"><div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-hands-praying"></i></div></div><h3>Dr. Nivedita Shreyansh</h3><p class="small">Spiritual & Youth Value Leadership</p></div>
-        <div class="card person-card awardee-card"><div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-masks-theater"></i></div></div><h3>Mrs. Varsha Karle</h3><p class="small">Arts & Cultural Curation</p></div>
-        <div class="card person-card awardee-card"><div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-people-group"></i></div></div><h3>Ms. Alina Alam</h3><p class="small">Social Inclusion & Human Dignity</p></div>
-      </div>
-    </section>
+    <section id="honourees" class="container"><div class="section-head"><div><div class="section-kicker">Honourees / Awardees</div><h2>Awardees</h2></div><p>Five women recognised for their contribution and impact.</p></div><div class="people-grid-5"><div class="card person-card awardee-card"><div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-scale-balanced"></i></div></div><h3>Mrs. Swati Chauhan</h3><p>Judiciary & Social Service</p></div><div class="card person-card awardee-card"><div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-staff-snake"></i></div></div><h3>Dr. Sujata Bapat</h3><p>Healthcare, Women Empowerment & Community Wellness</p></div><div class="card person-card awardee-card"><div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-hands-praying"></i></div></div><h3>Dr. Nivedita Shreyansh</h3><p>Spiritual & Youth Value Leadership</p></div><div class="card person-card awardee-card"><div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-masks-theater"></i></div></div><h3>Mrs. Varsha Karle</h3><p>Arts & Cultural Curation</p></div><div class="card person-card awardee-card"><div class="photo-frame"><div class="photo-placeholder"><i class="fa-solid fa-people-group"></i></div></div><h3>Ms. Alina Alam</h3><p>Social Inclusion & Human Dignity</p></div></div></section>
 
-    <section id="flow" class="container">
-      <div class="section-head"><div class="kicker">Event Flow</div><h2>Programme highlights</h2><p>A graceful evening planned with cultural invocation, dialogue, recognition and inspiration.</p></div>
-      <div class="agenda-grid">
-        <div class="card agenda-card"><div class="agenda-time">5:00 PM</div><i class="fa-solid fa-om"></i><h3>Opening Invocation</h3><p class="small">Shiv Stuti, welcome and lamp lighting.</p></div>
-        <div class="card agenda-card"><div class="agenda-time">Theme Session</div><i class="fa-solid fa-comments"></i><h3>Discussion</h3><p class="small">A moderated conversation with invited speakers.</p></div>
-        <div class="card agenda-card"><div class="agenda-time">Award Segment</div><i class="fa-solid fa-award"></i><h3>Samman Ceremony</h3><p class="small">Presentation of awards to honourees.</p></div>
-        <div class="card agenda-card"><div class="agenda-time">Addresses</div><i class="fa-solid fa-microphone"></i><h3>Guest Reflections</h3><p class="small">Words of inspiration from dignitaries.</p></div>
-        <div class="card agenda-card"><div class="agenda-time">Closing</div><i class="fa-solid fa-hands-praying"></i><h3>Vote of Thanks</h3><p class="small">Formal closing with gratitude.</p></div>
-      </div>
-    </section>
+    <section id="schedule" class="container"><div class="section-head"><div><div class="section-kicker">Schedule</div><h2>Programme schedule</h2></div><p>Simple overview of the evening flow.</p></div><div class="schedule-table"><div class="schedule-row"><div class="schedule-time">5:00 PM onwards</div><div class="schedule-content"><h3>Opening & Cultural Invocation</h3><p>Shiv Stuti, welcome address, ceremonial lamp lighting and introduction.</p></div></div><div class="schedule-row"><div class="schedule-time">Theme Session</div><div class="schedule-content"><h3>Expert Discussion Session</h3><p>Moderated discussion with invited speakers on values, leadership, communication and culture.</p></div></div><div class="schedule-row"><div class="schedule-time">Award Segment</div><div class="schedule-content"><h3>Sahaj Prerna Samman 2026</h3><p>Presentation of awards to honourees across five categories.</p></div></div><div class="schedule-row"><div class="schedule-time">Guest Addresses</div><div class="schedule-content"><h3>Words of Inspiration</h3><p>Addresses by distinguished guests and dignitaries.</p></div></div><div class="schedule-row"><div class="schedule-time">Closing</div><div class="schedule-content"><h3>Vote of Thanks & Vande Mataram</h3><p>Formal closing with gratitude and national spirit.</p></div></div></div></section>
 
-    <section id="info" class="container">
-      <div class="section-head"><div class="kicker">Venue & Visitor Information</div><h2>Plan your visit</h2><p>Please keep the following information in mind for smooth entry and seating coordination.</p></div>
-      <div class="info-grid">
-        <div class="card"><ul class="note-list"><li>Entry is free, with limited seating available.</li><li>RSVP confirmation is requested for event coordination.</li><li>Entry is subject to venue security protocols.</li><li>Please carry any one valid Government-issued photo ID.</li><li>Parking in BKC may be subject to availability.</li><li>Contact: Divya Prakash, Program Manager: +91 97304 15945.</li></ul></div>
-        <div class="map-box"><iframe title="NSE Auditorium BKC Mumbai Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=National%20Stock%20Exchange%20BKC%20Mumbai&output=embed"></iframe></div>
-      </div>
-      <div class="cta"><h2>Reserve Your Presence</h2><p>Be part of an evening of inspiration, legacy and recognition. Kindly confirm your presence for event coordination.</p><a class="btn" href="https://www.sahajkalatmakfoundation.org/rsvp">RSVP – Confirm Your Presence</a></div>
-    </section>
+    <section id="venue" class="container"><div class="section-head"><div><div class="section-kicker">Venue & Visitor Info</div><h2>Plan your visit</h2></div><p>Essential information for smooth entry and coordination.</p></div><div class="info-grid"><div class="card info-card"><ul class="note-list"><li>Entry is free, with limited seating available.</li><li>RSVP confirmation is requested.</li><li>Entry is subject to venue security protocols.</li><li>Please carry any one valid Government-issued photo ID.</li><li>Parking in BKC may be subject to availability.</li><li>Contact: Divya Prakash, Program Manager: +91 97304 15945.</li></ul></div><div class="card map-box"><iframe title="NSE Auditorium BKC Mumbai Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=National%20Stock%20Exchange%20BKC%20Mumbai&output=embed"></iframe></div></div><div class="cta"><h2>Reserve Your Presence</h2><p>Kindly confirm your presence for event coordination and smooth entry management.</p><a class="btn" href="https://www.sahajkalatmakfoundation.org/rsvp">RSVP – Confirm Your Presence</a></div></section>
   </main>
-
   <footer>© 2026 Sahaj Kalatmak Foundation. All rights reserved.</footer>
 </body>
 </html>
