@@ -587,6 +587,80 @@
       max-width:640px;
     }
 
+
+.social-connect{
+  padding:18px 0 10px;
+}
+
+.instagram-panel{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:22px;
+  background:linear-gradient(135deg,#fffdf8,#fff4dc);
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:26px 28px;
+  box-shadow:var(--soft-shadow);
+}
+
+.ig-icon{
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-size:30px;
+  flex-shrink:0;
+}
+
+.instagram-content{
+  flex:1;
+}
+
+.instagram-content h2{
+  margin:0 0 8px;
+  color:var(--maroon);
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:30px;
+  line-height:1.1;
+}
+
+.instagram-content p{
+  margin:0;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.5;
+  max-width:620px;
+}
+
+.instagram-btn{
+  white-space:nowrap;
+}
+
+@media(max-width:760px){
+  .instagram-panel{
+    flex-direction:column;
+    text-align:center;
+    padding:22px 18px;
+  }
+
+  .instagram-content h2{
+    font-size:24px;
+  }
+
+  .instagram-btn{
+    width:100%;
+  }
+}
+
+
+
+
+    
     footer{
       margin-top:18px;
       padding:30px 18px;
@@ -877,7 +951,30 @@
       </div>
     </section>
   </main>
+<section class="social-connect container">
+  <div class="instagram-panel">
 
+    <div class="ig-icon">
+      <i class="fa-brands fa-instagram"></i>
+    </div>
+
+    <div class="instagram-content">
+      <h2>Stay Connected With Sahaj</h2>
+      <p>
+        Official event photographs, memorable moments, speaker highlights and future cultural announcements will be shared on our Instagram.
+      </p>
+    </div>
+
+    <a
+      href="https://www.instagram.com/sahajkalatmakfoundation/"
+      target="_blank"
+      class="btn instagram-btn"
+    >
+      Follow Sahaj on Instagram
+    </a>
+
+  </div>
+</section>
   <footer>© 2026 Sahaj Kalatmak Foundation. All rights reserved.</footer>
 </body>
 </html>
