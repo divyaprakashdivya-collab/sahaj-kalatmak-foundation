@@ -339,6 +339,44 @@
       box-shadow:var(--soft-shadow);
     }
 
+    .photo-card{
+      padding:0;
+      overflow:hidden;
+      min-height:auto;
+      justify-content:flex-start;
+    }
+
+    .photo-box{
+      width:100%;
+      height:260px;
+      background:#fff3df;
+      border-bottom:1px solid var(--line);
+    }
+
+    .photo-box img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center top;
+      display:block;
+    }
+
+    .photo-placeholder-box{
+      width:100%;
+      height:260px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(135deg,#fff9ec,#f2dca8);
+      color:var(--maroon);
+      font-size:48px;
+      border-bottom:1px solid var(--line);
+    }
+
+    .person-info{
+      padding:18px 16px 20px;
+    }
+
     .avatar{
       width:86px;
       height:86px;
@@ -658,9 +696,35 @@
     <section id="guests" class="container">
       <div class="section-title"><h2>Esteemed Guests Presence</h2></div>
       <div class="people-grid-3">
-        <div class="person"><div class="avatar"><div class="avatar-inner"><i class="fa-solid fa-user-tie"></i></div></div><h3>Smt. Aruna Raje</h3><p>Veteran Filmmaker</p><span class="chip">Guest of Honour</span></div>
-        <div class="person"><div class="avatar"><div class="avatar-inner"><i class="fa-solid fa-clapperboard"></i></div></div><h3>Shri Rajpal Yadav</h3><p>Renowned Actor</p><span class="chip">Guest of Honour</span></div>
-        <div class="person"><div class="avatar"><div class="avatar-inner"><i class="fa-solid fa-users-line"></i></div></div><h3>Smt. Seema Saroj</h3><p>Chairperson, FICCI FLO Mumbai</p><span class="chip">Guest of Honour</span></div>
+        <div class="person photo-card">
+          <div class="photo-box">
+            <img src="../assets/images/logo/aruna-raje.jpeg" alt="Smt. Aruna Raje">
+          </div>
+          <div class="person-info">
+            <h3>Smt. Aruna Raje</h3>
+            <p>Veteran Filmmaker</p>
+          </div>
+        </div>
+
+        <div class="person photo-card">
+          <div class="photo-box">
+            <img src="../assets/images/logo/rajpal-yadav.webp" alt="Shri Rajpal Yadav">
+          </div>
+          <div class="person-info">
+            <h3>Shri Rajpal Yadav</h3>
+            <p>Renowned Actor</p>
+          </div>
+        </div>
+
+        <div class="person photo-card">
+          <div class="photo-placeholder-box">
+            <i class="fa-solid fa-users-line"></i>
+          </div>
+          <div class="person-info">
+            <h3>Smt. Seema Saroj</h3>
+            <p>Chairperson, FICCI FLO Mumbai</p>
+          </div>
+        </div>
       </div>
     </section>
 
