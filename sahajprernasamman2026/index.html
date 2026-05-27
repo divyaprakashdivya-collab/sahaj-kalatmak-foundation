@@ -436,17 +436,9 @@
       line-height:1.4;
     }
 
-    .chip{
-      margin-top:10px;
-      padding:5px 10px;
-      border-radius:999px;
-      background:rgba(196,154,44,.14);
-      color:var(--maroon);
-      font-size:10.5px;
-      font-weight:900;
-      text-transform:uppercase;
-      letter-spacing:.4px;
-    }
+.chip{
+  display:none;
+}
 
     .session-panel{
       background:transparent;
@@ -456,10 +448,10 @@
       box-shadow:none;
     }
 
-    .moderator{
-      position:relative;
-      background:linear-gradient(180deg,#fffdf8,#fff0ce);
-    }
+   .moderator{
+  position:relative;
+  border:2px solid rgba(196,154,44,.55);
+}
 
     .moderator-badge{
       position:absolute;
@@ -846,10 +838,39 @@
   <h2>Distinguished Speakers</h2>
 </div>
         <div class="people-grid-3">
-          <div class="person"><div class="avatar"><div class="avatar-inner"><i class="fa-solid fa-microphone-lines"></i></div></div><h3>Prof. Deepa Singh</h3><p>Department of Communication & Journalism, University of Mumbai</p><span class="chip">Speaker</span></div>
-          <div class="person moderator"><span class="moderator-badge">Moderator</span><div class="avatar"><div class="avatar-inner"><i class="fa-solid fa-comments"></i></div></div><h3>Runa Ashish</h3><p>Journalist</p><span class="chip">Anchor / Moderator</span></div>
-          <div class="person"><div class="avatar"><div class="avatar-inner"><i class="fa-solid fa-landmark"></i></div></div><h3>Shri Raj Shekhar Joshi</h3><p>Former Vice Chairman, Setu Aayog (State Planning Commission), Uttarakhand</p><span class="chip">Speaker</span></div>
-        </div>
+
+  <div class="person photo-card">
+    <div class="photo-box">
+      <img src="../assets/images/logo/Deepa_1.png" alt="Prof. Deepa Singh">
+    </div>
+    <div class="person-info">
+      <h3>Prof. Deepa Singh</h3>
+      <p>Department of Communication & Journalism, University of Mumbai</p>
+    </div>
+  </div>
+
+  <div class="person photo-card moderator">
+    <span class="moderator-badge">Moderator</span>
+    <div class="photo-box">
+      <img src="../assets/images/logo/Runa_2.png" alt="Runa Ashish">
+    </div>
+    <div class="person-info">
+      <h3>Runa Ashish</h3>
+      <p>Journalist</p>
+    </div>
+  </div>
+
+  <div class="person photo-card">
+    <div class="photo-box">
+      <img src="../assets/images/logo/Raj_3.png" alt="Shri Raj Shekhar Joshi">
+    </div>
+    <div class="person-info">
+      <h3>Shri Raj Shekhar Joshi</h3>
+      <p>Former Vice Chairman, Setu Aayog (State Planning Commission), Uttarakhand</p>
+    </div>
+  </div>
+
+</div>
       </div>
     </section>
 
