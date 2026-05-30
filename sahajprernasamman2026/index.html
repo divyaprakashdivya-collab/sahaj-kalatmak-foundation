@@ -3,577 +3,999 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sahaj Prerna Samman 2026 | Sahaj Kalatmak Foundation</title>
+  <meta name="description" content="Official event information page for Sahaj Prerna Samman 2026 by Sahaj Kalatmak Foundation at NSE Auditorium, BKC Mumbai." />
 
-  <title>Sahaj Kalatmak Foundation | Art for Society</title>
-  <meta
-    name="description"
-    content="Sahaj Kalatmak Foundation is a cultural and creative foundation connecting art with society through theatre, storytelling, documentaries, dialogue, and meaningful public engagement."
-  />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <link rel="icon" type="image/png" href="assets/images/common/favicon.png" />
-  <link rel="stylesheet" href="assets/css/variables.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <style>
+    :root{
+      --cream:#fff8ec;
+      --ivory:#fffdf8;
+      --paper:#fffaf1;
+      --maroon:#741936;
+      --deep:#461020;
+      --gold:#c49a2c;
+      --gold-soft:#f2dfb2;
+      --text:#2f241f;
+      --muted:#706259;
+      --line:rgba(196,154,44,.34);
+      --shadow:0 18px 46px rgba(70,16,32,.12);
+      --soft-shadow:0 10px 26px rgba(70,16,32,.07);
+    }
+
+    *{box-sizing:border-box}
+
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      font-family:Inter,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 10% 0%,rgba(196,154,44,.14),transparent 26%),
+        radial-gradient(circle at 90% 10%,rgba(116,25,54,.09),transparent 25%),
+        linear-gradient(180deg,#fffaf2 0%,#fff6e8 50%,#fffaf3 100%);
+      line-height:1.55;
+    }
+
+    a{text-decoration:none;color:inherit}
+
+    .container{max-width:1140px;margin:0 auto;padding:0 20px}
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(255,250,242,.96);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav{
+      min-height:68px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      max-width:1140px;
+      margin:0 auto;
+      padding:8px 20px;
+      position:relative;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:11px;
+      color:var(--maroon);
+      font-weight:800;
+      font-size:15px;
+      white-space:nowrap;
+    }
+
+    .brand-logo{
+      width:42px;
+      height:42px;
+      border-radius:50%;
+      object-fit:contain;
+      background:#fff;
+      padding:4px;
+      box-shadow:0 0 0 1px var(--line);
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      font-size:13px;
+      font-weight:700;
+      color:var(--muted);
+    }
+
+    .nav-links a:hover{color:var(--maroon)}
+
+    .nav-toggle,.hamburger{display:none}
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:12px 20px;
+      border-radius:999px;
+      background:var(--maroon);
+      color:#fff!important;
+      font-weight:800;
+      font-size:14px;
+      border:1px solid rgba(255,255,255,.20);
+      box-shadow:0 10px 24px rgba(116,25,54,.22);
+    }
+
+    .btn.secondary{
+      background:#fff;
+      color:var(--maroon)!important;
+      border:1px solid rgba(116,25,54,.25);
+      box-shadow:none;
+    }
+
+    .hero{
+      padding:26px 0 34px;
+      border-bottom:1px solid var(--line);
+    }
+
+    .hero-intro{
+      text-align:center;
+      max-width:850px;
+      margin:0 auto 20px;
+    }
+
+    .label{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:7px 12px;
+      border-radius:999px;
+      background:rgba(196,154,44,.13);
+      border:1px solid var(--line);
+      color:var(--maroon);
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:.7px;
+      text-transform:uppercase;
+      margin-bottom:12px;
+    }
+
+    .label i{color:var(--gold)}
+
+    h1{
+      margin:0 0 8px;
+      color:var(--maroon);
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(38px,5vw,64px);
+      line-height:1.03;
+      letter-spacing:-1px;
+    }
+
+    .hero-intro p{
+      margin:0 auto;
+      color:var(--muted);
+      font-size:18px;
+      max-width:760px;
+    }
+
+    .poster-hero{
+      max-width:850px;
+      margin:0 auto;
+      background:linear-gradient(180deg,#fffdf8,#fff1d7);
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:10px;
+      box-shadow:var(--shadow);
+    }
+
+    .poster-hero img{
+      display:block;
+      width:100%;
+      height:auto;
+      border-radius:18px;
+      background:#f2e3cb;
+    }
+
+    .event-bar{
+      max-width:900px;
+      margin:18px auto 0;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:10px;
+    }
+
+    .event-item{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:13px 12px;
+      text-align:center;
+      box-shadow:var(--soft-shadow);
+    }
+
+    .event-item i{
+      display:block;
+      color:var(--gold);
+      font-size:19px;
+      margin-bottom:5px;
+    }
+
+    .event-item b{
+      display:block;
+      color:var(--maroon);
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.5px;
+    }
+
+    .event-item span{
+      display:block;
+      color:var(--text);
+      font-size:13.5px;
+      line-height:1.35;
+    }
+
+    .hero-actions{
+      margin:18px auto 0;
+      display:flex;
+      justify-content:center;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .entry-note{
+      text-align:center;
+      margin-top:11px;
+      font-size:13.5px;
+      color:var(--maroon);
+      font-weight:800;
+    }
+
+    section{
+      padding:38px 0;
+      scroll-margin-top:82px;
+    }
+
+.section-title{
+  text-align:center;
+  margin:0 0 28px;
+  padding:18px 0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.section-title h2{
+  margin:0;
+  color:var(--maroon);
+  font-family:Georgia,"Times New Roman",serif;
+  line-height:1.05;
+  font-weight:700;
+}
+
+/* HERO STYLE TITLE */
+.section-title.hero-title h2{
+  font-size:clamp(40px,5vw,64px);
+}
+
+/* STANDARD SECTION TITLES */
+.section-title.standard h2{
+  font-size:clamp(30px,3.5vw,46px);
+}
+
+    .panel{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:24px;
+      box-shadow:var(--soft-shadow);
+    }
+
+    .panel-pad{padding:22px}
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+
+    .about-card p{
+      margin:0;
+      color:var(--muted);
+      font-size:15.5px;
+    }
+
+    .foundation-card{
+      background:linear-gradient(135deg,var(--maroon),var(--deep));
+      color:#fff;
+      border-color:rgba(196,154,44,.45);
+    }
+
+    .foundation-card h3{
+      margin:0 0 8px;
+      color:#fff;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:23px;
+    }
+
+    .foundation-card p{
+      margin:0;
+      color:#f7e8d4;
+    }
+
+    .tags{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-top:14px;
+    }
+
+    .tags span{
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.12);
+      font-size:12px;
+      font-weight:800;
+      color:#fff;
+    }
+
+    .people-grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+
+    .people-grid-5{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:13px;
+    }
+
+    .person{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:20px 14px;
+      text-align:center;
+      min-height:210px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      box-shadow:var(--soft-shadow);
+    }
+
+    .photo-card{
+      padding:0;
+      overflow:hidden;
+      min-height:auto;
+      justify-content:flex-start;
+    }
+
+    .photo-box{
+      width:100%;
+      height:260px;
+      background:#fff3df;
+      border-bottom:1px solid var(--line);
+    }
+
+    .photo-box img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center top;
+      display:block;
+    }
+
+    .photo-placeholder-box{
+      width:100%;
+      height:260px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(135deg,#fff9ec,#f2dca8);
+      color:var(--maroon);
+      font-size:48px;
+      border-bottom:1px solid var(--line);
+    }
+
+    .person-info{
+      padding:18px 16px 20px;
+    }
+
+    .avatar{
+      width:86px;
+      height:86px;
+      border-radius:50%;
+      padding:5px;
+      background:linear-gradient(135deg,var(--gold-soft),var(--gold),var(--maroon));
+      margin-bottom:13px;
+    }
+
+    .avatar-inner{
+      width:100%;
+      height:100%;
+      border-radius:50%;
+      background:linear-gradient(135deg,#fff9ec,#f2dca8);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--maroon);
+      font-size:26px;
+      border:3px solid #fff;
+      overflow:hidden;
+    }
+
+    .avatar-inner img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .person h3{
+      margin:0 0 6px;
+      color:var(--maroon);
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:18px;
+      line-height:1.22;
+    }
+
+    .person p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.4;
+    }
+
+.chip{
+  display:none;
+}
+
+    .session-panel{
+      background:transparent;
+      border:0;
+      border-radius:0;
+      padding:0;
+      box-shadow:none;
+    }
+
+   .moderator{
+  position:relative;
+  border:2px solid rgba(196,154,44,.55);
+}
+
+    .moderator-badge{
+      position:absolute;
+      top:12px;
+      right:12px;
+      background:var(--maroon);
+      color:#fff;
+      padding:5px 9px;
+      border-radius:999px;
+      font-size:10px;
+      font-weight:900;
+      text-transform:uppercase;
+    }
+
+.awardee-photo{
+  padding:0;
+  overflow:hidden;
+  min-height:auto;
+  justify-content:flex-start;
+}
+
+.awardee-photo .photo-box{
+  height:220px;
+}
+
+.awardee-photo .person-info{
+  padding:16px 14px 18px;
+}
+
+.awardee-photo h3{
+  font-size:16px;
+  margin-bottom:6px;
+}
+
+.awardee-photo p{
+  font-size:13px;
+  line-height:1.35;
+}
+
+    .highlights-grid{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:13px;
+    }
+
+    .highlight{
+      padding:18px 12px;
+      text-align:center;
+    }
+
+    .highlight i{
+      font-size:22px;
+      color:var(--maroon);
+      margin-bottom:10px;
+    }
+
+    .highlight b{
+      display:block;
+      color:var(--gold);
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.7px;
+      margin-bottom:5px;
+    }
+
+    .highlight h3{
+      margin:0 0 5px;
+      color:var(--maroon);
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:16.5px;
+    }
+
+    .highlight p{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.35;
+    }
+
+    .venue-grid{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:18px;
+    }
+
+    .notes{
+      margin:0;
+      padding-left:20px;
+      color:var(--muted);
+    }
+
+    .notes li{margin-bottom:8px}
+
+    .map{
+      min-height:310px;
+      overflow:hidden;
+    }
+
+    .map iframe{
+      border:0;
+      width:100%;
+      height:100%;
+      min-height:310px;
+      display:block;
+    }
+
+    .cta{
+      margin-top:28px;
+      background:var(--maroon);
+      border-radius:24px;
+      color:#fff;
+      text-align:center;
+      padding:34px 20px;
+    }
+
+    .cta h2{
+      margin:0 0 8px;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:34px;
+    }
+
+    .cta p{
+      margin:0 auto 18px;
+      color:#f7e8d4;
+      max-width:640px;
+    }
+
+
+.social-connect{
+  padding:18px 0 10px;
+}
+
+.instagram-panel{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:22px;
+  background:linear-gradient(135deg,#fffdf8,#fff4dc);
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:26px 28px;
+  box-shadow:var(--soft-shadow);
+}
+
+.ig-icon{
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-size:30px;
+  flex-shrink:0;
+}
+
+.instagram-content{
+  flex:1;
+}
+
+.instagram-content h2{
+  margin:0 0 8px;
+  color:var(--maroon);
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:30px;
+  line-height:1.1;
+}
+
+.instagram-content p{
+  margin:0;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.5;
+  max-width:620px;
+}
+
+.instagram-btn{
+  white-space:nowrap;
+}
+
+@media(max-width:760px){
+  .instagram-panel{
+    flex-direction:column;
+    text-align:center;
+    padding:22px 18px;
+  }
+
+  .instagram-content h2{
+    font-size:24px;
+  }
+
+  .instagram-btn{
+    width:100%;
+  }
+}
+
+
+
+
+    
+    footer{
+      margin-top:18px;
+      padding:30px 18px;
+      background:var(--deep);
+      color:#f7e8d4;
+      text-align:center;
+      font-size:13px;
+    }
+
+    @media(max-width:1000px){
+      .event-bar{grid-template-columns:repeat(2,1fr)}
+      .about-grid,.venue-grid{grid-template-columns:1fr}
+      .people-grid-5,.highlights-grid{grid-template-columns:repeat(3,1fr)}
+    }
+
+    @media(max-width:760px){
+      .nav{min-height:66px}
+      .brand{font-size:13px;white-space:normal}
+      .brand-logo{width:38px;height:38px}
+      .hamburger{
+        display:flex;
+        width:42px;
+        height:42px;
+        border:1px solid var(--line);
+        border-radius:12px;
+        align-items:center;
+        justify-content:center;
+        background:#fff;
+      }
+      .hamburger span,
+      .hamburger span:before,
+      .hamburger span:after{
+        content:"";
+        display:block;
+        width:20px;
+        height:2px;
+        background:var(--maroon);
+        position:relative;
+      }
+      .hamburger span:before{position:absolute;top:-7px}
+      .hamburger span:after{position:absolute;top:7px}
+      .nav-links{
+        display:none;
+        position:absolute;
+        top:66px;
+        left:14px;
+        right:14px;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        background:#fffaf1;
+        border:1px solid var(--line);
+        border-radius:18px;
+        box-shadow:var(--shadow);
+        overflow:hidden;
+      }
+      .nav-links a{
+        padding:13px 16px;
+        border-bottom:1px solid rgba(196,154,44,.18);
+      }
+      .nav-links .btn{
+        margin:12px;
+        width:calc(100% - 24px);
+      }
+      .nav-toggle:checked~.nav-links{display:flex}
+      .hero{padding:24px 0 30px}
+      .hero-intro{text-align:left}
+      h1{font-size:35px}
+      .event-bar,.people-grid-3,.people-grid-5,.highlights-grid{grid-template-columns:1fr}
+      .hero-actions .btn{width:100%}
+      section{padding:32px 0}
+      .section-title h2{font-size:28px}
+      .poster-hero{padding:8px;border-radius:20px}
+      .poster-hero img{border-radius:14px}
+      .cta h2{font-size:30px}
+    }
+  </style>
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="wrap nav">
-      <a href="index.html" class="brand" aria-label="Sahaj Kalatmak Foundation Home">
-        <div class="brand__logo">
-          <img src="assets/images/logo/sahaj-logo.jpg" alt="Sahaj Kalatmak Foundation logo" />
-        </div>
-        <div class="brand__text">
-          <h1>Sahaj Kalatmak Foundation</h1>
-          <p>कला | संवाद | संवेदना | समाज</p>
-        </div>
-      </a>
-
-      <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <nav class="nav__menu" aria-label="Primary navigation">
-        <a href="#home">Home</a>
+  <header class="topbar">
+    <nav class="nav">
+      <div class="brand">
+        <img src="../assets/images/logo/eventlogo.jpg" alt="Sahaj Kalatmak Foundation" class="brand-logo" />
+        <span>Sahaj Kalatmak Foundation</span>
+      </div>
+      <input class="nav-toggle" type="checkbox" id="menu-toggle" />
+      <label class="hamburger" for="menu-toggle" aria-label="Open menu"><span></span></label>
+      <div class="nav-links">
         <a href="#about">About</a>
-        <a href="#people">People</a>
-        <a href="#initiatives">Initiatives</a>
-        <a href="#signature-programmes">Programmes</a>
-        <a href="#events">Events</a>
-        <a href="#media">Media</a>
-        <a href="#collaborate">Partner With Us</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+        <a href="#guests">Guests</a>
+        <a href="#session">Speakers</a>
+        <a href="#awardees">Awardees</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#venue">Venue</a>
+        <a class="btn" href="https://www.sahajkalatmakfoundation.org/rsvp">RSVP</a>
+      </div>
+    </nav>
   </header>
 
   <main>
-    <section class="hero" id="home">
-      <div class="wrap hero__grid">
-        <div class="card hero__content">
-          <div class="eyebrow">Art for Society</div>
-          <h2>Sahaj Kalatmak Foundation</h2>
-          <p class="hero-kicker">Where Art Meets Society</p>
-          <p class="hero__subtitle">कला केवल अभिव्यक्ति नहीं, समाज से संवाद का माध्यम है।</p>
-
-          <p class="hero__intro">
-            Sahaj Kalatmak Foundation is a cultural and creative foundation connecting theatre,
-            storytelling, documentaries, literary dialogue, and public engagement with meaningful
-            social purpose. We create thoughtful cultural experiences that inspire reflection,
-            deepen sensitivity, and strengthen the relationship between art and society.
-          </p>
-
-          <div class="button-row">
-            <a class="btn btn--primary" href="#collaborate">Partner With Us</a>
-            <a class="btn btn--secondary" href="#events">Explore Events</a>
-          </div>
-
-          <div class="trust-bar">
-            <span>🎭 Theatre</span>
-            <span>•</span>
-            <span>💬 Cultural Dialogues</span>
-            <span>•</span>
-            <span>🎥 Documentaries</span>
-            <span>•</span>
-            <span>🤝 Public Initiatives</span>
-          </div>
-        </div>
-
-        <aside class="card panel identity-panel">
-          <div class="identity-logo">
-            <img src="assets/images/logo/sahaj-logo.jpg" alt="Sahaj Kalatmak Foundation logo" />
-          </div>
-
-          <div class="ornament-line"><span></span></div>
-
-          <h3>Core Identity</h3>
-          <p>
-            A culturally rooted, public-facing institution presenting art with dignity,
-            warmth, responsibility, and social relevance.
-          </p>
-
-          <div class="value-list value-list--chips">
-            <div class="value-pill"><span>🎨</span> कला</div>
-            <div class="value-pill"><span>💬</span> संवाद</div>
-            <div class="value-pill"><span>🧡</span> संवेदना</div>
-            <div class="value-pill"><span>👥</span> समाज</div>
-          </div>
-        </aside>
+    <section class="hero container">
+      <div class="hero-intro">
+        <div class="label"><i class="fa-solid fa-award"></i> Official Event Page</div>
+        <h1>Sahaj Prerna Samman 2026</h1>
+        <p>A cultural award evening by Sahaj Kalatmak Foundation, inspired by the life and values of Lokmata Ahilyabai Holkar.</p>
       </div>
+
+      <div class="poster-hero">
+        <img src="../assets/images/logo/formPoster1.png" alt="Sahaj Prerna Samman 2026 Poster" />
+      </div>
+
+      <div class="event-bar">
+        <div class="event-item"><i class="fa-solid fa-calendar-days"></i><b>Date</b><span>30 May 2026, Saturday</span></div>
+        <div class="event-item"><i class="fa-solid fa-clock"></i><b>Time</b><span>5:00 PM to 7:00 PM</span></div>
+        <div class="event-item"><i class="fa-solid fa-location-dot"></i><b>Venue</b><span>NSE Auditorium, BKC Mumbai</span></div>
+        <div class="event-item"><i class="fa-solid fa-ticket"></i><b>Entry</b><span>Free Entry • Limited Seating</span></div>
+      </div>
+
+      <div class="hero-actions">
+        <a class="btn" href="https://www.sahajkalatmakfoundation.org/rsvp">RSVP – Confirm Your Presence</a>
+        <a class="btn secondary" href="#venue">View Venue Details</a>
+      </div>
+      <div class="entry-note">Government photo ID required for venue entry.</div>
     </section>
 
-    <section class="section impact-section">
-      <div class="wrap">
-        <div class="impact-strip card">
-          <div>
-            <strong>Cultural Engagement</strong>
-            <span>Thoughtful public programmes and artistic initiatives</span>
-          </div>
-          <div>
-            <strong>Creative Outreach</strong>
-            <span>Connecting artists, institutions, communities, and audiences</span>
-          </div>
-          <div>
-            <strong>Institutional Collaborations</strong>
-            <span>Building meaningful cultural partnerships</span>
-          </div>
+    <section id="about" class="container">
+     <div class="section-title hero-title">
+  <h2>An Evening of Inspiration & Recognition</h2>
+</div>
+      <div class="about-grid">
+        <div class="panel panel-pad about-card">
+          <p><strong>Sahaj Prerna Samman 2026</strong> celebrates inspiring women whose remarkable journeys reflect service, leadership, compassion, dignity, resilience, and social responsibility — honouring purpose-driven contributions that create lasting impact, inspire communities, and strengthen the spirit of a progressive Bharat.</p>
+        </div>
+        <div class="panel panel-pad foundation-card">
+          <h3>Sahaj Kalatmak Foundation</h3>
+          <p>A cultural and social organisation working through art, literature, theatre, awareness and value-based public engagement.</p>
+          <div class="tags"><span>Culture</span><span>Art</span><span>Social Impact</span><span>Women Leadership</span></div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="about">
-      <div class="wrap">
-        <div class="section__head">
-          <div>
-            <h3>About the Foundation</h3>
-            <div class="divider"></div>
+    <section id="guests" class="container">
+      <div class="section-title standard">
+  <h2>Esteemed Guests Presence</h2>
+</div>
+      <div class="people-grid-3">
+        <div class="person photo-card">
+          <div class="photo-box">
+            <img src="../assets/images/logo/Aruna Raje.png" alt="Smt. Aruna Raje">
           </div>
-          <p>
-            Thoughtfully rooted in culture, Sahaj Kalatmak Foundation works to connect art with society through meaningful initiatives.
-          </p>
+          <div class="person-info">
+            <h3>Smt. Aruna Raje</h3>
+            <p>Veteran Filmmaker</p>
+          </div>
         </div>
 
-        <div class="grid-2">
-          <div class="card about-card">
-            <p>
-              Sahaj Kalatmak Foundation is a cultural and creative foundation committed to connecting art
-              with society through theatre, storytelling, documentaries, literary dialogue, and meaningful public engagement.
-              We believe that art is not only a form of expression, but also a responsible and transformative medium
-              that creates awareness, deepens empathy, and encourages collective reflection.
-            </p>
-
-            <p>
-              Through carefully designed cultural initiatives, performances, discussions, and collaborative projects,
-              the foundation seeks to preserve artistic sensitivity while engaging with contemporary social realities
-              in a dignified and human way.
-            </p>
+        <div class="person photo-card">
+          <div class="photo-box">
+            <img src="../assets/images/logo/Rajpal Yadav.webp" alt="Shri Rajpal Yadav">
           </div>
+          <div class="person-info">
+            <h3>Shri Rajpal Yadav</h3>
+            <p>Renowned Actor</p>
+          </div>
+        </div>
 
-          <div class="card side-card">
-            <h3>Vision &amp; Mission</h3>
-            <ul>
-              <li><strong>Vision:</strong> To nurture a culturally aware, emotionally sensitive, and socially connected society through art.</li>
-              <li><strong>Mission:</strong> To create meaningful artistic experiences that inspire dialogue, participation, and reflection.</li>
-              <li><strong>Approach:</strong> Heritage-conscious, socially relevant, and creatively responsible cultural work.</li>
-            </ul>
+        <div class="person photo-card">
+          <div class="photo-box">
+            <img src="../assets/images/logo/Seema Saroj.jpeg" alt="Smt. Seema Saroj">
+          </div>
+          <div class="person-info">
+            <h3>Smt. Seema Saroj</h3>
+            <p>Chairperson, FICCI FLO Mumbai</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="people">
-      <div class="wrap">
-        <div class="section__head">
-          <div>
-            <h3>People Behind Sahaj Kalatmak Foundation</h3>
-            <div class="divider"></div>
-          </div>
-          <p>A dedicated team carrying forward culture, creativity, and public purpose.</p>
-        </div>
+    <section id="session" class="container">
+      <div class="session-panel">
+        <div class="section-title standard">
+  <h2>Distinguished Speakers</h2>
+</div>
+        <div class="people-grid-3">
 
-        <div class="people-row">
-          <a href="people.html#arun-shekhar" class="card content-card" aria-label="Read about Arun Shekhar">
-            <div class="content-card__thumb" style="background-image:url('assets/images/people/peopleImage1.png');"></div>
-            <div class="content-card__body">
-              <small>Founder / Director</small>
-              <h4>Arun Shekhar</h4>
-              <p>Cultural Vision &amp; Institutional Leadership</p>
-            </div>
-          </a>
+  <div class="person photo-card">
+    <div class="photo-box">
+      <img src="../assets/images/logo/Deepa_1.png" alt="Prof. Deepa Singh">
+    </div>
+    <div class="person-info">
+      <h3>Prof. Deepa Singh</h3>
+      <p>Department of Communication & Journalism, University of Mumbai</p>
+    </div>
+  </div>
 
-          <a href="people.html#shaurya-singh" class="card content-card" aria-label="Read about Shaurya Singh">
-            <div class="content-card__thumb" style="background-image:url('assets/images/people/peopleImage2.png');"></div>
-            <div class="content-card__body">
-              <small>Co-Director</small>
-              <h4>Shaurya Singh</h4>
-              <p>Youth Leadership &amp; Public Engagement</p>
-            </div>
-          </a>
+  <div class="person photo-card moderator">
+    <span class="moderator-badge">Moderator</span>
+    <div class="photo-box">
+      <img src="../assets/images/logo/Runa_2.png" alt="Runa Ashish">
+    </div>
+    <div class="person-info">
+      <h3>Smt. Runa Ashish</h3>
+      <p>Senior Journalist</p>
+    </div>
+  </div>
 
-          <a href="people.html#divya-prakash" class="card content-card" aria-label="Read about Divya Prakash">
-            <div class="content-card__thumb" style="background-image:url('assets/images/people/peopleImage3.png');"></div>
-            <div class="content-card__body">
-              <small>Program Manager</small>
-              <h4>Divya Prakash</h4>
-              <p>Creative Strategy &amp; Program Design</p>
-            </div>
-          </a>
+  <div class="person photo-card">
+    <div class="photo-box">
+      <img src="../assets/images/logo/Raj_311.png" alt="Shri Raj Shekhar Joshi">
+    </div>
+    <div class="person-info">
+      <h3>Shri Raj Shekhar Joshi</h3>
+      <p>Former Vice Chairman, Setu Aayog (State Planning Commission), Uttarakhand</p>
+    </div>
+  </div>
 
-          <a href="people.html#jagdish-nishad" class="card content-card" aria-label="Read about Jagdish Nishad">
-            <div class="content-card__thumb" style="background-image:url('assets/images/people/peopleImage4.png');"></div>
-            <div class="content-card__body">
-              <small>Cultural Mentor</small>
-              <h4>Jagdish Nishad</h4>
-              <p>Community Outreach &amp; Cultural Support</p>
-            </div>
-          </a>
-
-          <a href="people.html#sriprakash-menon" class="card content-card" aria-label="Read about Sriprakash Menon">
-            <div class="content-card__thumb" style="background-image:url('assets/images/people/peopleImage5.png');"></div>
-            <div class="content-card__body">
-              <small>Senior Advisor</small>
-              <h4>Sriprakash Menon</h4>
-              <p>Guidance, Wisdom &amp; Strategic Support</p>
-            </div>
-          </a>
-        </div>
+</div>
       </div>
     </section>
 
-    <section class="section" id="initiatives">
-      <div class="wrap">
-        <div class="section__head">
-          <div>
-            <h3>Initiatives</h3>
-            <div class="divider"></div>
-          </div>
-          <p>
-            Our initiatives bring together art, dialogue, performance, and cultural engagement through thoughtfully designed programmes.
-          </p>
-        </div>
+    <section id="awardees" class="container">
+      <div class="section-title standard">
+  <h2>Honouring Excellence</h2>
+</div>
+<div class="people-grid-5">
 
-        <div class="grid-4">
-          <article class="card feature-card">
-            <div class="feature-card__icon">🎭</div>
-            <h4>Theatre &amp; Performance</h4>
-            <p>Stage presentations, dramatic interpretations, and performance-led cultural experiences rooted in artistic depth and public engagement.</p>
-          </article>
+  <div class="person photo-card awardee-photo">
+    <div class="photo-box">
+      <img src="../assets/images/logo/Swati_1.png" alt="Mrs. Swati Chauhan">
+    </div>
+    <div class="person-info">
+      <h3>Mrs. Swati Chauhan</h3>
+      <p>Judiciary & Social Service</p>
+    </div>
+  </div>
 
-          <article class="card feature-card">
-            <div class="feature-card__icon">📚</div>
-            <h4>Storytelling &amp; Literary Dialogue</h4>
-            <p>Dialogues, readings, conversations, and literary gatherings that connect audiences with thought, language, and emotional resonance.</p>
-          </article>
+  <div class="person photo-card awardee-photo">
+    <div class="photo-box">
+      <img src="../assets/images/logo/Sujata_2.png" alt="Dr. Sujata Bapat">
+    </div>
+    <div class="person-info">
+      <h3>Dr. Sujata Bapat</h3>
+      <p>Healthcare, Women Empowerment & Community Wellness</p>
+    </div>
+  </div>
 
-          <article class="card feature-card">
-            <div class="feature-card__icon">🎬</div>
-            <h4>Documentary Projects</h4>
-            <p>Research-based visual storytelling that preserves heritage, documents voices, and brings socially meaningful narratives into public view.</p>
-          </article>
+  <div class="person photo-card awardee-photo">
+    <div class="photo-box">
+      <img src="../assets/images/logo/Nivedita_3.png" alt="Dr. Nivedita Shreyansh">
+    </div>
+    <div class="person-info">
+      <h3>Dr. Nivedita Shreyansh</h3>
+      <p>Spiritual & Youth Value Leadership</p>
+    </div>
+  </div>
 
-          <article class="card feature-card">
-            <div class="feature-card__icon">🤝</div>
-            <h4>Cultural Collaborations</h4>
-            <p>Partnerships with artists, institutions, communities, and educational bodies to build shared creative platforms and socially relevant programming.</p>
-          </article>
-        </div>
+  <div class="person photo-card awardee-photo">
+    <div class="photo-box">
+      <img src="../assets/images/logo/Varsha_4.png" alt="Mrs. Varsha Karle">
+    </div>
+    <div class="person-info">
+      <h3>Mrs. Varsha Karle</h3>
+      <p>Arts & Cultural Curation</p>
+    </div>
+  </div>
+
+  <div class="person photo-card awardee-photo">
+    <div class="photo-box">
+      <img src="../assets/images/logo/Alina_5.png" alt="Ms. Alina Alam">
+    </div>
+    <div class="person-info">
+      <h3>Ms. Alina Alam</h3>
+      <p>Social Inclusion & Human Dignity</p>
+    </div>
+  </div>
+
+</div>
+    </section>
+
+    <section id="highlights" class="container">
+     <div class="section-title standard">
+  <h2>Programme Highlights</h2>
+</div>
+      <div class="highlights-grid">
+        <div class="panel highlight"><i class="fa-solid fa-om"></i><b>Opening</b><h3>Cultural Invocation</h3><p>Shiv Stuti, welcome and ceremonial lamp lighting.</p></div>
+        <div class="panel highlight"><i class="fa-solid fa-comments"></i><b>Dialogue</b><h3>Discussion Session</h3><p>Conversation on values, culture and contribution.</p></div>
+        <div class="panel highlight"><i class="fa-solid fa-award"></i><b>Recognition</b><h3>Samman Ceremony</h3><p>Honouring inspiring women contributors.</p></div>
+        <div class="panel highlight"><i class="fa-solid fa-microphone"></i><b>Inspiration</b><h3>Guest Reflections</h3><p>Words of inspiration from invited guests.</p></div>
+        <div class="panel highlight"><i class="fa-solid fa-hands-praying"></i><b>Closing</b><h3>Vote of Thanks</h3><p>Closing note with gratitude and national spirit.</p></div>
       </div>
     </section>
 
-    <section class="section" id="signature-programmes">
-      <div class="wrap">
-        <div class="section__head">
-          <div>
-            <h3>Signature Programmes</h3>
-            <div class="divider"></div>
-          </div>
-          <p>
-            Programmes that reflect our commitment to culture, heritage, public dialogue, and meaningful artistic expression.
-          </p>
+    <section id="venue" class="container">
+<div class="section-title standard">
+  <h2>Plan Your Visit</h2>
+</div>
+      <div class="venue-grid">
+        <div class="panel panel-pad">
+          <ul class="notes">
+            <li>Entry is free, with limited seating available.</li>
+            <li>RSVP confirmation is requested.</li>
+            <li>Entry is subject to venue security protocols.</li>
+            <li>Please carry any one valid Government-issued photo ID.</li>
+            <li>Parking in BKC may be subject to availability.</li>
+            <li>Contact: Divya Prakash, Program Manager: +91 97304 15945.</li>
+          </ul>
         </div>
-
-        <div class="grid-4">
-          <article class="card feature-card">
-            <div class="feature-card__icon">🏵️</div>
-            <h4>सहज प्रेरणा सम्मान</h4>
-            <p>An honour dedicated to recognising inspiring individuals whose work reflects social contribution, courage, and cultural values.</p>
-          </article>
-
-          <article class="card feature-card">
-            <div class="feature-card__icon">🎭</div>
-            <h4>Theatre Productions</h4>
-            <p>Stage-based cultural presentations that bring historical, literary, and social narratives closer to audiences.</p>
-          </article>
-
-          <article class="card feature-card">
-            <div class="feature-card__icon">🪔</div>
-            <h4>Cultural Dialogues</h4>
-            <p>Thoughtful conversations with artists, scholars, and public voices around culture, society, and contemporary relevance.</p>
-          </article>
-
-          <article class="card feature-card">
-            <div class="feature-card__icon">🎥</div>
-            <h4>Documentary Initiatives</h4>
-            <p>Research-led visual projects that document heritage, people, traditions, and stories of social significance.</p>
-          </article>
+        <div class="panel map">
+          <iframe title="NSE Auditorium BKC Mumbai Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=National%20Stock%20Exchange%20BKC%20Mumbai&output=embed"></iframe>
         </div>
       </div>
-    </section>
-
-    <section class="section" id="events">
-      <div class="wrap">
-        <div class="section__head">
-          <div>
-            <h3>Events</h3>
-            <div class="divider"></div>
-          </div>
-          <p>
-            Discover upcoming programmes, performances, public conversations, and meaningful cultural gatherings.
-          </p>
-        </div>
-
-        <div class="grid-3">
-          <article class="card content-card">
-            <div class="content-card__thumb" style="background-image:url('assets/images/events/event-01.jpg');"></div>
-            <div class="content-card__body">
-              <small>Cultural Dialogue</small>
-              <h4>Curated Conversations</h4>
-              <p>Thoughtful programmes that bring artists, scholars, and audiences together around ideas, performance, and cultural reflection.</p>
-            </div>
-          </article>
-
-          <article class="card content-card">
-            <div class="content-card__thumb" style="background-image:url('assets/images/events/event-02.jpg');"></div>
-            <div class="content-card__body">
-              <small>Theatre Experience</small>
-              <h4>Performance-led Evenings</h4>
-              <p>Live presentations designed not merely as shows, but as immersive artistic experiences carrying meaning and emotional texture.</p>
-            </div>
-          </article>
-
-          <article class="card content-card">
-            <div class="content-card__thumb" style="background-image:url('assets/images/events/event-03.jpg');"></div>
-            <div class="content-card__body">
-              <small>Community Engagement</small>
-              <h4>Creative Public Initiatives</h4>
-              <p>Outreach-driven cultural formats that strengthen social participation and make the arts more accessible, relevant, and inclusive.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="media">
-      <div class="wrap">
-        <div class="section__head">
-          <div>
-            <h3>Media &amp; Documentation</h3>
-            <div class="divider"></div>
-          </div>
-          <p>
-            Explore media coverage, visual highlights, event documentation, and moments from our cultural journey.
-          </p>
-        </div>
-
-        <div class="grid-3">
-          <article class="card content-card">
-            <div class="content-card__thumb" style="background-image:url('assets/images/media/media-01.jpg');"></div>
-            <div class="content-card__body">
-              <small>Photo Archive</small>
-              <h4>Visual Glimpses</h4>
-              <p>Selected photographs that document the atmosphere, seriousness, and aesthetic identity of the foundation’s work.</p>
-            </div>
-          </article>
-
-          <article class="card content-card">
-            <div class="content-card__thumb" style="background-image:url('assets/images/media/media-02.jpg');"></div>
-            <div class="content-card__body">
-              <small>Coverage</small>
-              <h4>Press &amp; Mentions</h4>
-              <p>Media references, announcements, cultural notes, and published documentation that strengthen public trust.</p>
-            </div>
-          </article>
-
-          <article class="card content-card">
-            <div class="content-card__thumb" style="background-image:url('assets/images/media/media-03.jpg');"></div>
-            <div class="content-card__body">
-              <small>Screen Work</small>
-              <h4>Documentary Presence</h4>
-              <p>Shorts, documentary material, and visual narratives that reflect the foundation’s research-based and culturally thoughtful work.</p>
-            </div>
-          </article>
-        </div>
-
-        <div class="quote-band">
-          <p>“Where art is treated with dignity, society receives not just performance, but reflection.”</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="collaborate">
-      <div class="wrap">
-        <div class="section__head">
-          <div>
-            <h3>Partner With Us</h3>
-            <div class="divider"></div>
-          </div>
-          <p>
-            Meaningful cultural work grows through collaboration with institutions, artists, educators, communities, sponsors, and thoughtful partners.
-          </p>
-        </div>
-
-        <article class="card content-card">
-          <div class="content-card__body">
-            <h4>Let us build meaningful cultural work together</h4>
-
-            <p>
-              Sahaj Kalatmak Foundation collaborates with schools, colleges, artists, researchers,
-              cultural institutions, social organisations, public bodies, and CSR partners interested in using art
-              as a medium of dialogue, heritage preservation, and community connection.
-            </p>
-
-            <p>
-              Partnerships may include curated events, theatrical initiatives, documentary projects, literary programmes,
-              workshops, heritage-based projects, public conversations, cultural outreach, and socially engaged creative formats.
-            </p>
-
-            <div class="button-row">
-              <a class="btn btn--primary" href="#contact">Start a Conversation</a>
-              <a class="btn btn--secondary" href="#media">View Institutional Presence</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="contact">
-      <div class="wrap">
-        <div class="section__head">
-          <div>
-            <h3>Contact</h3>
-            <div class="divider"></div>
-          </div>
-
-          <p>
-            For inquiries, collaborations, participation, or institutional outreach, feel free to connect with us.
-          </p>
-        </div>
-
-        <div class="grid-3">
-          <article class="card content-card">
-            <div class="content-card__body">
-              <h4>Foundation Office</h4>
-
-              <ul class="contact-list">
-                <li>📍 302/28-E, Sankalp Siddhi CHS, New Dindoshi MHADA, Goregaon (East), Mumbai – 400065, Maharashtra, India</li>
-                <li>
-                  ✉
-                  <a href="mailto:sahajkalatmakfoundation@gmail.com" class="email-link">
-                    sahajkalatmakfoundation@gmail.com
-                  </a>
-                </li>
-                <li>
-                  📞
-                  <a href="tel:+919820160760" class="contact-link">
-                    +91 9820160760
-                  </a>
-                </li>
-                <li>
-                  💬
-                  <a href="https://wa.me/919820160760" target="_blank" rel="noopener noreferrer" class="contact-link">
-                    WhatsApp Chat
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="card content-card">
-            <div class="content-card__body">
-              <h4>Institutional Outreach</h4>
-
-              <p>
-                For collaborations, programmes, curated events, screenings, workshops,
-                sponsorships, CSR conversations, and cultural partnerships, write to us at
-              </p>
-
-              <p>
-                ✉
-                <a href="mailto:connect.sahajkalatmakfoundation@gmail.com" class="email-link">
-                  connect.sahajkalatmakfoundation@gmail.com
-                </a>
-              </p>
-            </div>
-          </article>
-
-          <article class="card content-card">
-            <div class="content-card__body">
-              <h4>Stay Connected</h4>
-
-              <p>
-                Follow the foundation’s social channels for updates, glimpses,
-                programme announcements, cultural documentation, and future initiatives.
-              </p>
-            </div>
-          </article>
-        </div>
+      <div class="cta">
+        <h2>Reserve Your Presence</h2>
+        <p>Kindly confirm your presence for event coordination and smooth entry management.</p>
+        <a class="btn" href="https://www.sahajkalatmakfoundation.org/rsvp">RSVP – Confirm Your Presence</a>
       </div>
     </section>
   </main>
+<section class="social-connect container">
+  <div class="instagram-panel">
 
-  <footer class="footer">
-    <div class="wrap">
-      <div class="footer__grid card">
-        <div class="footer-brand-block">
-          <div class="footer-logo-row">
-            <img src="assets/images/logo/sahaj-logo.jpg" alt="Sahaj Kalatmak Foundation logo" />
-          </div>
-          <h4>Sahaj Kalatmak Foundation</h4>
-          <p class="footer-tagline">कला | संवाद | संवेदना | समाज</p>
-          <div class="footer-ornament"></div>
-          <p>Preserving values. Inspiring dialogue. Connecting society through art.</p>
-          <p><strong>Art for Society</strong></p>
-
-          <div class="footer-social-icons" aria-label="Social links">
-            <a href="https://www.instagram.com/sahajkalatmakfoundation" target="_blank" rel="noopener noreferrer" aria-label="Instagram">◎</a>
-            <a href="https://www.facebook.com/sahajkalatmakfoundation" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
-            <a href="https://youtube.com/@sahajkalatmakfoundation" target="_blank" rel="noopener noreferrer" aria-label="YouTube">▶</a>
-            <a href="https://x.com/SahajKalatmak" target="_blank" rel="noopener noreferrer" aria-label="Twitter X">𝕏</a>
-            <a href="mailto:connect.sahajkalatmakfoundation@gmail.com" aria-label="Email">✉</a>
-          </div>
-        </div>
-
-        <div>
-          <h4>Quick Links</h4>
-          <ul class="footer__list">
-            <li><a href="#about">About</a></li>
-            <li><a href="#people">People</a></li>
-            <li><a href="#initiatives">Initiatives</a></li>
-            <li><a href="#signature-programmes">Programmes</a></li>
-            <li><a href="#events">Events</a></li>
-            <li><a href="#media">Media</a></li>
-            <li><a href="#collaborate">Partner With Us</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4>Our Initiatives</h4>
-          <ul class="footer__list">
-            <li>Theatre &amp; Performance</li>
-            <li>Storytelling &amp; Dialogue</li>
-            <li>Documentary Projects</li>
-            <li>Cultural Collaborations</li>
-            <li>Community Engagement</li>
-            <li>Heritage &amp; Preservation</li>
-          </ul>
-        </div>
-
-        <div>
-          <h4>Contact Us</h4>
-          <ul class="footer__list footer-contact-list">
-            <li>📍 302/28-E, Sankalp Siddhi CHS, New Dindoshi MHADA, Goregaon (East), Mumbai – 400065</li>
-            <li><a href="mailto:sahajkalatmakfoundation@gmail.com">✉ sahajkalatmakfoundation@gmail.com</a></li>
-            <li><a href="tel:+919820160760">📞 +91 9820160760</a></li>
-            <li><a href="https://wa.me/919820160760" target="_blank" rel="noopener noreferrer">💬 WhatsApp Chat</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div class="copyright">
-          © <span data-year></span> Sahaj Kalatmak Foundation. All rights reserved.
-        </div>
-        <div class="developer-credit">
-          Designed &amp; Developed by
-          <a href="https://instagram.com/cinematikink" target="_blank" class="dev-name" rel="noopener noreferrer">CinematikInk</a>
-        </div>
-      </div>
+    <div class="ig-icon">
+      <i class="fa-brands fa-instagram"></i>
     </div>
-  </footer>
 
-  <script src="assets/js/main.js"></script>
+    <div class="instagram-content">
+    <h2>The Journey Continues Beyond This Evening</h2>
+      <p>
+Be part of Sahaj’s growing cultural community. Follow us for official event photographs, inspiring conversations and upcoming initiatives.
+</p>
+    </div>
+
+    <a
+      href="https://www.instagram.com/sahajkalatmakfoundation/"
+      target="_blank"
+      class="btn instagram-btn"
+    >
+      Join the Journey
+    </a>
+
+  </div>
+</section>
+  <footer>© 2026 Sahaj Kalatmak Foundation. All rights reserved.</footer>
 </body>
 </html>
